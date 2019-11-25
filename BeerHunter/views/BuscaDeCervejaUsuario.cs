@@ -1,5 +1,6 @@
-﻿using BeerHunter.Model;
+﻿using BeerHunter.inter;
 using BeerHunter.Service;
+using BeerHunter.Model;
 using System;
 using System.Data;
 using System.Linq;
@@ -9,6 +10,7 @@ namespace BeerHunter.views
 {
     public partial class BuscaDeCervejaUsuario : Form
     {
+        private IUtilidadeService _utilidadeService;
         private readonly BeerHunterContext context;
         Util _util;
         private readonly Usuario usuario;
@@ -18,17 +20,11 @@ namespace BeerHunter.views
             context = new BeerHunterContext();
             this._util = util;
             usuario = context.Usuario.Find(util.id);
+            _utilidadeService = new UtilidadesService();
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-
-            string busca = textBusca.Text;
-            var query = from resultado in context.Cerveja
-                        join p in context.CadastraCerveja on resultado.CervejaID equals p.CervejaID.CervejaID
-                        where (resultado.NomeCerveja == busca)
-                        select new { nomeCerveja = resultado.NomeCerveja, preco = p.PrecoCerveja };
-            DataGrid.DataSource = query.ToList();
-
+            DataGrid.DataSource = _utilidadeService.BuscaCervejaBanco(textBusca.Text);
         }
 
         private void btnVoltarTelaLogin_Click(object sender, EventArgs e)
@@ -43,10 +39,12 @@ namespace BeerHunter.views
 
         private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if(e.ColumnIndex == DataGrid.Columns["NomeCerveja"].Index)
             {
+                string nomeCerveja = DataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
                 DataGrid.EndEdit();
-                Avaliacao avaliacao = new Avaliacao();
+                Avaliacao avaliacao = new Avaliacao(nomeCerveja);
                 this.Hide();
                 avaliacao.ShowDialog();
                 this.Show();

@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -279,6 +281,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="inter\IUtilidadeService.cs" />
     <Compile Include="Migrations\201910160236323_beerhunter.cs" />
     <Compile Include="Migrations\201910160236323_beerhunter.designer.cs">
       <DependentUpon>201910160236323_beerhunter.cs</DependentUpon>
@@ -303,11 +306,11 @@
     <Compile Include="Model\CadastraCerveja.cs" />
     <Compile Include="Model\Login.cs" />
     <Compile Include="Model\Usuario.cs" />
-    <Compile Include="Model\UsuarioDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BeerHunterContext.cs" />
     <Compile Include="Service\Util.cs" />
+    <Compile Include="Service\UtilidadesService.cs" />
     <Compile Include="views\Avaliacao.cs">
       <SubType>Form</SubType>
     </Compile>

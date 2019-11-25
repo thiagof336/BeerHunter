@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeerHunter.inter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace BeerHunter.views
 {
     public partial class Avaliacao : Form
     {
-        public Avaliacao()
+        protected string _nomeCerveja;
+        protected readonly IUtilidadeService _utilidadeService;
+        public Avaliacao(string nomeCerveja)
         {
+            _nomeCerveja = nomeCerveja;
             InitializeComponent();
+        }
+
+        private void Avaliacao_Load(object sender, EventArgs e)
+        {
+            lbNomeCerveja.Text = _nomeCerveja;
+            
         }
     }
 }

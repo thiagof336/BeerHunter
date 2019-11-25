@@ -1,4 +1,5 @@
-﻿using BeerHunter.Service;
+﻿using BeerHunter.inter;
+using BeerHunter.Service;
 using BeerHunter.views;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace BeerHunter
         private static Form current;
         private Cadastro cadastro;
         private BeerHunterContext dBcontext;
-
+        private IUtilidadeService _utilidadeService;
         public static Form Current { get => current; set => current = value; }
 
         public Login()
@@ -26,6 +27,7 @@ namespace BeerHunter
             InitializeComponent();
             current = this;
             dBcontext = new BeerHunterContext();
+            _utilidadeService = new UtilidadesService();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -55,19 +57,24 @@ namespace BeerHunter
                     }
                     else
                     {
-                        var login = dBcontext.Usuario.Where(p => p.Nomeusuario == usuario && p.Senha == senha).FirstOrDefault();
-                        if (login == null)
+                        var login = _utilidadeService.UsuarioExiste(usuario, senha);
+                        if (login != null)
+                        {
+                            util.id = login.UsuarioID;
+                            util.tipo = "Cliente";
+                            util.dtLogin = DateTime.Now;
+                            BuscaDeCervejaUsuario janela = new BuscaDeCervejaUsuario(util);
+                            this.Hide();
+                            janela.ShowDialog();
+                            this.Show();
+                        }
+                        else
                         {
                             MessageBox.Show("usuario ou senha incorreto");
                             return;
                         }
-                        util.id = login.UsuarioID;
-                        util.tipo = "Cliente";
-                        util.dtLogin = DateTime.Now;
-                        BuscaDeCervejaUsuario janela = new BuscaDeCervejaUsuario(util);
-                        this.Hide();
-                        janela.ShowDialog();
-                        this.Show();
+                       
+                       
                     }
                 }
                 else if (radioFornecedor.Checked)
@@ -79,7 +86,7 @@ namespace BeerHunter
                     }
                     else
                     {
-                        var login = dBcontext.Fornecedor.Where(p => p.Login == usuario && p.Senha == senha).FirstOrDefault();
+                        var login = _utilidadeService.FornecedorExiste(usuario, senha);
                         if (login == null)
                         {
                             MessageBox.Show("Usuario e senha incorreto");
