@@ -407,6 +407,7 @@ namespace BeerHunter.views
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBairro);
             this.Name = "Cadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cadastro";
             this.Load += new System.EventHandler(this.Cadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsuario)).EndInit();

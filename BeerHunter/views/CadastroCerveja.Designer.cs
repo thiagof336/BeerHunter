@@ -225,6 +225,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadastroCerveja";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroCerveja";
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogoCerveja)).EndInit();
             this.ResumeLayout(false);

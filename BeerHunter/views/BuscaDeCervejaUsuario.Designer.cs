@@ -50,7 +50,7 @@
             "Lupulo",
             "Preco",
             "Tipo"});
-            this.SeletorBusca.Location = new System.Drawing.Point(16, 115);
+            this.SeletorBusca.Location = new System.Drawing.Point(16, 92);
             this.SeletorBusca.Name = "SeletorBusca";
             this.SeletorBusca.Size = new System.Drawing.Size(125, 21);
             this.SeletorBusca.TabIndex = 0;
@@ -59,7 +59,7 @@
             // textBusca
             // 
             this.textBusca.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBusca.Location = new System.Drawing.Point(147, 116);
+            this.textBusca.Location = new System.Drawing.Point(147, 93);
             this.textBusca.Name = "textBusca";
             this.textBusca.Size = new System.Drawing.Size(438, 20);
             this.textBusca.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(323, 142);
+            this.btnBuscar.Location = new System.Drawing.Point(323, 119);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 3;
@@ -78,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 99);
+            this.label1.Location = new System.Drawing.Point(53, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 13);
             this.label1.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             // btnVoltarTelaLogin
             // 
-            this.btnVoltarTelaLogin.Location = new System.Drawing.Point(510, 403);
+            this.btnVoltarTelaLogin.Location = new System.Drawing.Point(510, 386);
             this.btnVoltarTelaLogin.Name = "btnVoltarTelaLogin";
             this.btnVoltarTelaLogin.Size = new System.Drawing.Size(75, 23);
             this.btnVoltarTelaLogin.TabIndex = 6;
@@ -97,7 +97,7 @@
             // DataGrid
             // 
             this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGrid.Location = new System.Drawing.Point(12, 171);
+            this.DataGrid.Location = new System.Drawing.Point(12, 148);
             this.DataGrid.Name = "DataGrid";
             this.DataGrid.Size = new System.Drawing.Size(573, 216);
             this.DataGrid.TabIndex = 7;
@@ -105,9 +105,9 @@
             // 
             // FotoUsuario
             // 
-            this.FotoUsuario.Location = new System.Drawing.Point(479, 12);
+            this.FotoUsuario.Location = new System.Drawing.Point(498, 12);
             this.FotoUsuario.Name = "FotoUsuario";
-            this.FotoUsuario.Size = new System.Drawing.Size(106, 81);
+            this.FotoUsuario.Size = new System.Drawing.Size(87, 68);
             this.FotoUsuario.TabIndex = 8;
             this.FotoUsuario.TabStop = false;
             // 
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 439);
+            this.ClientSize = new System.Drawing.Size(596, 419);
             this.Controls.Add(this.FotoUsuario);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.btnVoltarTelaLogin);
@@ -124,6 +124,7 @@
             this.Controls.Add(this.textBusca);
             this.Controls.Add(this.SeletorBusca);
             this.Name = "BuscaDeCervejaUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscaDeCervejaUsuario";
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FotoUsuario)).EndInit();

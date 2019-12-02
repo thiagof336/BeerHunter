@@ -149,6 +149,7 @@
             this.btnVoltarTelaCadastro.TabIndex = 4;
             this.btnVoltarTelaCadastro.Text = "Voltar";
             this.btnVoltarTelaCadastro.UseVisualStyleBackColor = true;
+            this.btnVoltarTelaCadastro.Click += new System.EventHandler(this.btnVoltarTelaCadastro_Click);
             // 
             // pictureBox2
             // 
@@ -220,6 +221,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Avaliacao";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Avaliacao";
             this.Load += new System.EventHandler(this.Avaliacao_Load);
             this.groupBox1.ResumeLayout(false);

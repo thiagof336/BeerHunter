@@ -12,14 +12,11 @@ namespace BeerHunter.views
     {
         private IUtilidadeService _utilidadeService;
         private readonly BeerHunterContext context;
-        Util _util;
-        private readonly Usuario usuario;
-        public BuscaDeCervejaUsuario(Util util)
+        
+        public BuscaDeCervejaUsuario()
         {
             InitializeComponent();
             context = new BeerHunterContext();
-            this._util = util;
-            usuario = context.Usuario.Find(util.id);
             _utilidadeService = new UtilidadesService();
         }
         private void BtnBuscar_Click(object sender, EventArgs e)

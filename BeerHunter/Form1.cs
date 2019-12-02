@@ -2,14 +2,6 @@
 using BeerHunter.Service;
 using BeerHunter.views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BeerHunter
@@ -47,7 +39,6 @@ namespace BeerHunter
                
                 string usuario = txtNomeUsuario.Text;
                 string senha = _utilidadeService.Criptografia(txtSenha.ToString());
-                Util util = new Util();
                 if (radioUsuario.Checked)
                 {
                     if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
@@ -60,10 +51,11 @@ namespace BeerHunter
                         var login = _utilidadeService.UsuarioExiste(usuario, senha);
                         if (login != null)
                         {
-                            util.id = login.UsuarioID;
-                            util.tipo = "Cliente";
-                            util.dtLogin = DateTime.Now;
-                            BuscaDeCervejaUsuario janela = new BuscaDeCervejaUsuario(util);
+                            Session.Instance.id = login.UsuarioID;
+                            Session.Instance.tipo = "Cliente";
+                            Session.Instance.dtLogin = DateTime.Now;
+                            Session.Instance.Nome = login.Nome;
+                            BuscaDeCervejaUsuario janela = new BuscaDeCervejaUsuario();
                             this.Hide();
                             janela.ShowDialog();
                             this.Show();
@@ -92,10 +84,11 @@ namespace BeerHunter
                         }
                         else
                         {
-                            util.id = login.FornecedorID;
-                            util.tipo = "Fornecedor";
-                            util.dtLogin = DateTime.Now;
-                            CadastroCerveja janelaCadastro = new CadastroCerveja(util);
+                            Session.Instance.id = login.FornecedorID;
+                            Session.Instance.tipo = "Fornecedor";
+                            Session.Instance.dtLogin = DateTime.Now;
+                            Session.Instance.Nome = login.Nome;
+                            CadastroCerveja janelaCadastro = new CadastroCerveja();
                             this.Hide();
                             janelaCadastro.ShowDialog();
                             this.Show();

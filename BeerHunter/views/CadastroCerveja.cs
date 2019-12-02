@@ -1,13 +1,6 @@
 ﻿using BeerHunter.Model;
 using BeerHunter.Service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BeerHunter.views
@@ -15,14 +8,12 @@ namespace BeerHunter.views
     public partial class CadastroCerveja : Form
     {
         BeerHunterContext beerHunterContext;
-        private readonly Util util;
-        private readonly Fornecedor fornecedor;
-        public CadastroCerveja(Util util)
+        
+        public CadastroCerveja()
         {
             InitializeComponent();
             beerHunterContext = new BeerHunterContext();
-            this.util = util;
-            fornecedor = beerHunterContext.Fornecedor.Find(util.id);
+           
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -40,7 +31,7 @@ namespace BeerHunter.views
             beerHunterContext.Cerveja.Add(cerveja);
             beerHunterContext.CadastraCerveja.Add(precoCerveja);
             precoCerveja.CervejaID = cerveja;
-            precoCerveja.FornecedorID = fornecedor;
+            //precoCerveja.FornecedorID = ;
             beerHunterContext.CadastraCerveja.Add(precoCerveja);
 
             beerHunterContext.SaveChanges();

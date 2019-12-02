@@ -1,12 +1,6 @@
 ﻿using BeerHunter.inter;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BeerHunter.views
@@ -16,7 +10,12 @@ namespace BeerHunter.views
         protected string _nomeCerveja, _preco, _teorAlcolico, _lupulo;
         protected readonly IUtilidadeService _utilidadeService;
         private RealizarAvaliacao realizarAvaliacao;
-        
+
+        private void btnVoltarTelaCadastro_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
+
         public Avaliacao(string nomeCerveja, string preco, string teorAlcolico, string lupulo)
         {
             _preco = preco;

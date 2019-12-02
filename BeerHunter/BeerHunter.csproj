@@ -313,7 +313,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BeerHunterContext.cs" />
-    <Compile Include="Service\Util.cs" />
+    <Compile Include="Service\Session.cs" />
     <Compile Include="Service\UtilidadesService.cs" />
     <Compile Include="views\Avaliacao.cs">
       <SubType>Form</SubType>

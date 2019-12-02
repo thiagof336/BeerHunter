@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BeerHunter.Service;
+using System;
 using System.Windows.Forms;
 
 namespace BeerHunter.views
@@ -15,6 +9,14 @@ namespace BeerHunter.views
         public RealizarAvaliacao()
         {
             InitializeComponent();
+            lblNomeUsuario.Text = Session.Instance.id.ToString();
+
+
+        }
+
+        private void btnVoltarAvaliacao_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }
