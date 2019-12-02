@@ -166,6 +166,7 @@ namespace BeerHunter.views
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(100, 20);
             this.txtSenha.TabIndex = 8;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -324,6 +325,7 @@ namespace BeerHunter.views
             this.txtSenhaFornecedor.Name = "txtSenhaFornecedor";
             this.txtSenhaFornecedor.Size = new System.Drawing.Size(142, 20);
             this.txtSenhaFornecedor.TabIndex = 27;
+            this.txtSenhaFornecedor.UseSystemPasswordChar = true;
             // 
             // label14
             // 
