@@ -10,6 +10,5 @@ namespace BeerHunter.Model
         public string Login { get; set; }
         public string Senha { get; set; }
 
-
     }
 }

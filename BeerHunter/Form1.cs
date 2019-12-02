@@ -46,7 +46,7 @@ namespace BeerHunter
             {
                
                 string usuario = txtNomeUsuario.Text;
-                string senha = txtSenha.Text;
+                string senha = _utilidadeService.Criptografia(txtSenha.ToString());
                 Util util = new Util();
                 if (radioUsuario.Checked)
                 {
@@ -73,8 +73,6 @@ namespace BeerHunter
                             MessageBox.Show("usuario ou senha incorreto");
                             return;
                         }
-                       
-                       
                     }
                 }
                 else if (radioFornecedor.Checked)

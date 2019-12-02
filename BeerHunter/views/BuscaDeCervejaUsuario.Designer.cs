@@ -54,6 +54,7 @@
             this.SeletorBusca.Name = "SeletorBusca";
             this.SeletorBusca.Size = new System.Drawing.Size(125, 21);
             this.SeletorBusca.TabIndex = 0;
+            this.SeletorBusca.SelectedIndexChanged += new System.EventHandler(this.SeletorBusca_SelectedIndexChanged);
             // 
             // textBusca
             // 

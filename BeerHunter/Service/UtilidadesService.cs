@@ -3,6 +3,7 @@ using BeerHunter.Model;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,10 +14,12 @@ namespace BeerHunter.Service
     public class UtilidadesService : IUtilidadeService
        {
         private readonly BeerHunterContext _context;
+
         public UtilidadesService()
         {
             _context = new BeerHunterContext();
         }
+
         public IEnumerable BuscaCervejaBanco(string b)
         {
             string busca = b;
@@ -24,8 +27,15 @@ namespace BeerHunter.Service
             {
                 var query = from resultado in _context.Cerveja
                             join p in _context.CadastraCerveja on resultado.CervejaID equals p.CervejaID.CervejaID
-                            where (resultado.NomeCerveja == busca)
-                            select new { nomeCerveja = resultado.NomeCerveja, preco = p.PrecoCerveja };
+                            join e in _context.Endereco on p.FornecedorID equals e.FornecedorID
+                            join f in _context.Fornecedor on e.FornecedorID.FornecedorID equals f.FornecedorID
+                            where resultado.NomeCerveja == busca
+                            select new { nomeCerveja = resultado.NomeCerveja,
+                                         preco = p.PrecoCerveja,
+                                         lupulo = resultado.Lupulo,
+                                         teorAlcolico = resultado.TeorAlcoolico,
+                                         nome = f.Nome
+                                         };
 
                 return query.ToList();
             }
@@ -52,6 +62,23 @@ namespace BeerHunter.Service
             }
             return login;
         }
+        public string Criptografia(string senha)
+        {
+            string ChaveCripto;
+            byte[] cript = Encoding.ASCII.GetBytes(senha);
+            ChaveCripto = Convert.ToBase64String(cript);
+
+            return ChaveCripto;
+        }
+        public string Descriptografar(string valor)
+        {
+            string chaveCripto;
+            Byte[] cript = Convert.FromBase64String(valor);
+            chaveCripto = System.Text.ASCIIEncoding.ASCII.GetString(cript);
+            return chaveCripto;
+
+        }
+
 
 
 

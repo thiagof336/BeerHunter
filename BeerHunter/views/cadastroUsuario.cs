@@ -1,13 +1,7 @@
-﻿using BeerHunter.Model;
+﻿using BeerHunter.inter;
+using BeerHunter.Model;
 using BeerHunter.Service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ViaCEP;
 
@@ -15,11 +9,13 @@ namespace BeerHunter.views
 {
     public partial class Cadastro : Form
     {
+        private IUtilidadeService _utilidadeService;
         BeerHunterContext beerHunterContext;
       
         public Cadastro()
         {
             InitializeComponent();
+            _utilidadeService = new UtilidadesService();
         }
 
         private void Usuario_CheckedChanged(object sender, EventArgs e)
@@ -60,22 +56,22 @@ namespace BeerHunter.views
 
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
-            
             beerHunterContext = new BeerHunterContext();
+
             if (radioFornecedor.Checked)
             {
                 Fornecedor fornecedor = new Fornecedor();
                 Endereco endereco = new Endereco();
 
                 fornecedor.Nome = txtNomeFornecedor.Text;
-                fornecedor.Senha = txtSenhaFornecedor.Text;
+                fornecedor.Senha = _utilidadeService.Criptografia(txtSenhaFornecedor.ToString());
                 fornecedor.Login = txtLogin.Text;
                 endereco.Bairro = txtBairro.Text;
                 endereco.Localidade = txtLocalidade.Text;
                 endereco.Logradouro = txtLogradouro.Text;
                 endereco.Uf = txtEstado.Text;
                 endereco.Cep = int.Parse(txtCEP.Text);
-                endereco.numero = int.Parse(txtNumero.Text);
+                endereco.Numero = (int.Parse(txtNumero.Text));
 
                 fornecedor = beerHunterContext.Fornecedor.Add(fornecedor);
                 endereco.FornecedorID = fornecedor;
@@ -88,11 +84,9 @@ namespace BeerHunter.views
                 Usuario usuario = new Usuario();
 
                 usuario.Nome = txtNome.Text;
-                usuario.Senha = txtSenha.Text;
+                usuario.Senha = _utilidadeService.Criptografia(txtSenha.ToString());
                 usuario.Nomeusuario = txtNomeUsuario.Text;
                 usuario.Email = txtEmail.Text;
-                
-                
                 
                 beerHunterContext.Usuario.Add(usuario);
                 beerHunterContext.SaveChanges();

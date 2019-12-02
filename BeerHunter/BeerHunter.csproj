@@ -294,9 +294,13 @@
     <Compile Include="Migrations\201910252056242_atualizacaoClasseFornecedor.designer.cs">
       <DependentUpon>201910252056242_atualizacaoClasseFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201911112021084_AlteracaoDoBanco.cs" />
-    <Compile Include="Migrations\201911112021084_AlteracaoDoBanco.designer.cs">
-      <DependentUpon>201911112021084_AlteracaoDoBanco.cs</DependentUpon>
+    <Compile Include="Migrations\201911291829027_banco de dados aws.cs" />
+    <Compile Include="Migrations\201911291829027_banco de dados aws.designer.cs">
+      <DependentUpon>201911291829027_banco de dados aws.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911301338236_correcao tabelas2.cs" />
+    <Compile Include="Migrations\201911301338236_correcao tabelas2.designer.cs">
+      <DependentUpon>201911301338236_correcao tabelas2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Avaliacao.cs" />
@@ -347,8 +351,11 @@
     <EmbeddedResource Include="Migrations\201910252056242_atualizacaoClasseFornecedor.resx">
       <DependentUpon>201910252056242_atualizacaoClasseFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911112021084_AlteracaoDoBanco.resx">
-      <DependentUpon>201911112021084_AlteracaoDoBanco.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911291829027_banco de dados aws.resx">
+      <DependentUpon>201911291829027_banco de dados aws.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911301338236_correcao tabelas2.resx">
+      <DependentUpon>201911301338236_correcao tabelas2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

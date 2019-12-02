@@ -13,7 +13,16 @@ namespace BeerHunter.inter
         Fornecedor FornecedorExiste(String usuario, String senha);
         Usuario UsuarioExiste(String usuario, String senha);
         IEnumerable BuscaCervejaBanco(string busca);
-        
+        string Criptografia(string senha);
+        string Descriptografar(string valor);
+
+
+
+
+
+
+
+
 
 
 

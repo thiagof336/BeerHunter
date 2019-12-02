@@ -7,13 +7,13 @@ namespace BeerHunter.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.3.0")]
-    public sealed partial class AlteracaoDoBanco : IMigrationMetadata
+    public sealed partial class bancodedadosaws : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AlteracaoDoBanco));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(bancodedadosaws));
         
         string IMigrationMetadata.Id
         {
-            get { return "201911112021084_AlteracaoDoBanco"; }
+            get { return "201911291829027_banco de dados aws"; }
         }
         
         string IMigrationMetadata.Source

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTeorAlcolico = new System.Windows.Forms.Label();
+            this.lblLupulo = new System.Windows.Forms.Label();
+            this.lblPreco = new System.Windows.Forms.Label();
             this.lbNomeCerveja = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -41,9 +41,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.lblTeorAlcolico);
+            this.groupBox1.Controls.Add(this.lblLupulo);
+            this.groupBox1.Controls.Add(this.lblPreco);
             this.groupBox1.Controls.Add(this.lbNomeCerveja);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -52,32 +52,32 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // label4
+            // lblTeorAlcolico
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 328);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.lblTeorAlcolico.AutoSize = true;
+            this.lblTeorAlcolico.Location = new System.Drawing.Point(17, 328);
+            this.lblTeorAlcolico.Name = "lblTeorAlcolico";
+            this.lblTeorAlcolico.Size = new System.Drawing.Size(35, 13);
+            this.lblTeorAlcolico.TabIndex = 4;
+            this.lblTeorAlcolico.Text = "label4";
             // 
-            // label3
+            // lblLupulo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 352);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.lblLupulo.AutoSize = true;
+            this.lblLupulo.Location = new System.Drawing.Point(17, 352);
+            this.lblLupulo.Name = "lblLupulo";
+            this.lblLupulo.Size = new System.Drawing.Size(35, 13);
+            this.lblLupulo.TabIndex = 3;
+            this.lblLupulo.Text = "label3";
             // 
-            // label2
+            // lblPreco
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 305);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.lblPreco.AutoSize = true;
+            this.lblPreco.Location = new System.Drawing.Point(17, 305);
+            this.lblPreco.Name = "lblPreco";
+            this.lblPreco.Size = new System.Drawing.Size(35, 13);
+            this.lblPreco.TabIndex = 2;
+            this.lblPreco.Text = "label2";
             // 
             // lbNomeCerveja
             // 
@@ -125,9 +125,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTeorAlcolico;
+        private System.Windows.Forms.Label lblLupulo;
+        private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lbNomeCerveja;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;

@@ -39,16 +39,29 @@ namespace BeerHunter.views
 
         private void DataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if(e.ColumnIndex == DataGrid.Columns["NomeCerveja"].Index)
+            
+            if (e.ColumnIndex == DataGrid.Columns["NomeCerveja"].Index)
             {
-                string nomeCerveja = DataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nomeCerveja = DataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                string preco = DataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string lupulo = DataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string teorAlcolico = DataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+
                 DataGrid.EndEdit();
-                Avaliacao avaliacao = new Avaliacao(nomeCerveja);
-                this.Hide();
-                avaliacao.ShowDialog();
+                using (Avaliacao avaliacao = new Avaliacao(nomeCerveja, preco, teorAlcolico, lupulo))
+                {
+                    this.Hide();
+                    avaliacao.ShowDialog();
+                }
                 this.Show();
             }
+        }
+
+        private void SeletorBusca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var seletor = SeletorBusca.SelectedItem.ToString();
+            
+
         }
     }
 }

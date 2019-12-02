@@ -8,7 +8,6 @@ namespace BeerHunter.Model
 {
     public class Endereco
     {
-        
         public virtual Fornecedor FornecedorID { get; set; }
         public int EnderecoID { get; set; }
         public string Bairro { get; set; }
@@ -16,6 +15,7 @@ namespace BeerHunter.Model
         public string Localidade { get; set; }
         public string Uf { get; set; }
         public string Logradouro { get; set; }
-        public int numero { get; set; }
+        public int Numero { get; set; }
+
     }
 }

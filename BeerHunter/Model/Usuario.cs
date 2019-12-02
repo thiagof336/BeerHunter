@@ -15,11 +15,5 @@ namespace BeerHunter.Model
         public string Nomeusuario { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-
-
     }
-
-
-
-
 }
