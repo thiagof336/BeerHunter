@@ -339,6 +339,12 @@
     <Compile Include="views\cadastroUsuario.Designer.cs">
       <DependentUpon>cadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\RealizarAvaliacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\RealizarAvaliacao.Designer.cs">
+      <DependentUpon>RealizarAvaliacao.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +383,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\cadastroUsuario.resx">
       <DependentUpon>cadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\RealizarAvaliacao.resx">
+      <DependentUpon>RealizarAvaliacao.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
