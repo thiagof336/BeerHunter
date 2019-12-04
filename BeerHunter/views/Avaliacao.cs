@@ -1,11 +1,12 @@
 ﻿using BeerHunter.inter;
+using BeerHunter.Service;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace BeerHunter.views
 {
-    public partial class Avaliacao : Form
+    public partial class telaAvaliacao : Form
     {
         protected string _nomeCerveja, _preco, _teorAlcolico, _lupulo;
         protected readonly IUtilidadeService _utilidadeService;
@@ -16,7 +17,7 @@ namespace BeerHunter.views
             DialogResult = DialogResult.OK;
         }
 
-        public Avaliacao(string nomeCerveja, string preco, string teorAlcolico, string lupulo)
+        public telaAvaliacao(string nomeCerveja, string preco, string teorAlcolico, string lupulo)
         {
             _preco = preco;
             _nomeCerveja = nomeCerveja;
@@ -37,11 +38,10 @@ namespace BeerHunter.views
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.Image = Image.FromFile(ImagePath);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-
         }
         private void btnAvaliar_Click(object sender, EventArgs e)
         {
-            realizarAvaliacao = new RealizarAvaliacao();
+            realizarAvaliacao = new RealizarAvaliacao(_nomeCerveja);
             realizarAvaliacao.ShowDialog();
             this.Show();
         }

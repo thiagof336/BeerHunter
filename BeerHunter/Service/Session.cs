@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BeerHunter.Model;
+using System;
 
 namespace BeerHunter.Service
 {
@@ -30,5 +31,6 @@ namespace BeerHunter.Service
         public String tipo;
         public string Nome;
         public DateTime dtLogin;
+        public CadastraCerveja cadastraCerveja;
     }
 }

@@ -1,9 +1,6 @@
 ﻿using BeerHunter.inter;
 using BeerHunter.Service;
-using BeerHunter.Model;
 using System;
-using System.Data;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace BeerHunter.views
@@ -21,7 +18,8 @@ namespace BeerHunter.views
         }
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            DataGrid.DataSource = _utilidadeService.BuscaCervejaBanco(textBusca.Text);
+
+               DataGrid.DataSource = _utilidadeService.BuscaCervejaBanco(textBusca.Text);
         }
 
         private void btnVoltarTelaLogin_Click(object sender, EventArgs e)
@@ -39,16 +37,19 @@ namespace BeerHunter.views
             
             if (e.ColumnIndex == DataGrid.Columns["NomeCerveja"].Index)
             {
-                string nomeCerveja = DataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                string preco = DataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string lupulo = DataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string teorAlcolico = DataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+                int CodCerveja = int.Parse(DataGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                string nomeCerveja = DataGrid.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string preco = DataGrid.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string lupulo = DataGrid.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string teorAlcolico = DataGrid.Rows[e.RowIndex].Cells[4].Value.ToString();
+                Session.Instance.cadastraCerveja = context.CadastraCerveja.Find(CodCerveja);     
+                //MessageBox.Show(IdCerveja.ToString());
 
                 DataGrid.EndEdit();
-                using (Avaliacao avaliacao = new Avaliacao(nomeCerveja, preco, teorAlcolico, lupulo))
+                using (telaAvaliacao telaAvaliacao = new telaAvaliacao(nomeCerveja, preco, teorAlcolico, lupulo))
                 {
                     this.Hide();
-                    avaliacao.ShowDialog();
+                    telaAvaliacao.ShowDialog();
                 }
                 this.Show();
             }

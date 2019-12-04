@@ -1,10 +1,6 @@
 ﻿using BeerHunter.Model;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeerHunter.inter
 {
@@ -15,6 +11,7 @@ namespace BeerHunter.inter
         IEnumerable BuscaCervejaBanco(string busca);
         string Criptografia(string senha);
         string Descriptografar(string valor);
+        
 
 
 

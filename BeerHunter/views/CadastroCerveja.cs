@@ -8,12 +8,14 @@ namespace BeerHunter.views
     public partial class CadastroCerveja : Form
     {
         BeerHunterContext beerHunterContext;
-        
+        Fornecedor Fornecedor;
         public CadastroCerveja()
         {
             InitializeComponent();
             beerHunterContext = new BeerHunterContext();
-           
+            Fornecedor = beerHunterContext.Fornecedor.Find(Session.Instance.id);
+
+
         }
         private void button2_Click(object sender, EventArgs e)
         {
@@ -31,7 +33,7 @@ namespace BeerHunter.views
             beerHunterContext.Cerveja.Add(cerveja);
             beerHunterContext.CadastraCerveja.Add(precoCerveja);
             precoCerveja.CervejaID = cerveja;
-            //precoCerveja.FornecedorID = ;
+            precoCerveja.FornecedorID = Fornecedor;
             beerHunterContext.CadastraCerveja.Add(precoCerveja);
 
             beerHunterContext.SaveChanges();

@@ -34,73 +34,64 @@ namespace BeerHunter
         }
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-            try
-            {
-               
                 string usuario = txtNomeUsuario.Text;
                 string senha = _utilidadeService.Criptografia(txtSenha.ToString());
-                if (radioUsuario.Checked)
-                {
-                    if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
-                    {
-                        MessageBox.Show("usuario e senha de preenchimento obrigatorio");
-                        return;
-                    }
-                    else
-                    {
-                        var login = _utilidadeService.UsuarioExiste(usuario, senha);
-                        if (login != null)
-                        {
-                            Session.Instance.id = login.UsuarioID;
-                            Session.Instance.tipo = "Cliente";
-                            Session.Instance.dtLogin = DateTime.Now;
-                            Session.Instance.Nome = login.Nome;
-                            BuscaDeCervejaUsuario janela = new BuscaDeCervejaUsuario();
-                            this.Hide();
-                            janela.ShowDialog();
-                            this.Show();
-                        }
-                        else
-                        {
-                            MessageBox.Show("usuario ou senha incorreto");
-                            return;
-                        }
-                    }
-                }
-                else if (radioFornecedor.Checked)
-                {
-                    if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
-                    {
-                        MessageBox.Show("usuario e senha de preenchimento obrigatorio");
-                        return;
-                    }
-                    else
-                    {
-                        var login = _utilidadeService.FornecedorExiste(usuario, senha);
-                        if (login == null)
-                        {
-                            MessageBox.Show("Usuario e senha incorreto");
-                            return;
-                        }
-                        else
-                        {
-                            Session.Instance.id = login.FornecedorID;
-                            Session.Instance.tipo = "Fornecedor";
-                            Session.Instance.dtLogin = DateTime.Now;
-                            Session.Instance.Nome = login.Nome;
-                            CadastroCerveja janelaCadastro = new CadastroCerveja();
-                            this.Hide();
-                            janelaCadastro.ShowDialog();
-                            this.Show();
-                        }
-                    }
-                }
-            }
-            catch (Exception)
+            if (radioUsuario.Checked)
             {
-                MessageBox.Show("Ocorreu um erro na solicitação");
+                if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
+                {
+                    MessageBox.Show("usuario e senha de preenchimento obrigatorio");
+                    return;
+                }
+                else
+                {
+                    var login = _utilidadeService.UsuarioExiste(usuario, senha);
+                    if (login != null)
+                    {
+                        Session.Instance.id = login.UsuarioID;
+                        Session.Instance.tipo = "Cliente";
+                        Session.Instance.dtLogin = DateTime.Now;
+                        Session.Instance.Nome = login.Nome;
+                        BuscaDeCervejaUsuario janela = new BuscaDeCervejaUsuario();
+                        this.Hide();
+                        janela.ShowDialog();
+                        this.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("usuario ou senha incorreto");
+                        return;
+                    }
+                }
             }
-            
+            else if (radioFornecedor.Checked)
+            {
+                if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
+                {
+                    MessageBox.Show("usuario e senha de preenchimento obrigatorio");
+                    return;
+                }
+                else
+                {
+                    var login = _utilidadeService.FornecedorExiste(usuario, senha);
+                    if (login == null)
+                    {
+                        MessageBox.Show("Usuario e senha incorreto");
+                        return;
+                    }
+                    else
+                    {
+                        Session.Instance.id = login.FornecedorID;
+                        Session.Instance.tipo = "Fornecedor";
+                        Session.Instance.dtLogin = DateTime.Now;
+                        Session.Instance.Nome = login.Nome;
+                        CadastroCerveja janelaCadastro = new CadastroCerveja();
+                        this.Hide();
+                        janelaCadastro.ShowDialog();
+                        this.Show();
+                    }
+                }
+            }
         }
     }
 }

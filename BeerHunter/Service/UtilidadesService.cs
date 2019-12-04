@@ -2,12 +2,8 @@
 using BeerHunter.Model;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace BeerHunter.Service
 {
@@ -19,7 +15,6 @@ namespace BeerHunter.Service
         {
             _context = new BeerHunterContext();
         }
-
         public IEnumerable BuscaCervejaBanco(string b)
         {
             string busca = b;
@@ -30,14 +25,17 @@ namespace BeerHunter.Service
                             join e in _context.Endereco on p.FornecedorID equals e.FornecedorID
                             join f in _context.Fornecedor on e.FornecedorID.FornecedorID equals f.FornecedorID
                             where resultado.NomeCerveja == busca
-                            select new { nomeCerveja = resultado.NomeCerveja,
-                                         preco = p.PrecoCerveja,
-                                         lupulo = resultado.Lupulo,
-                                         teorAlcolico = resultado.TeorAlcoolico,
-                                         nome = f.Nome
-                                         };
-
+                            select new
+                            {
+                                codigoCerveja = resultado.CervejaID,
+                                nomeCerveja = resultado.NomeCerveja,
+                                preco = p.PrecoCerveja,
+                                lupulo = resultado.Lupulo,
+                                teorAlcolico = resultado.TeorAlcoolico,
+                                nome = f.Nome
+                            };
                 return query.ToList();
+
             }
             catch (Exception)
             {
@@ -75,8 +73,8 @@ namespace BeerHunter.Service
             string chaveCripto;
             Byte[] cript = Convert.FromBase64String(valor);
             chaveCripto = System.Text.ASCIIEncoding.ASCII.GetString(cript);
-            return chaveCripto;
 
+            return chaveCripto;
         }
 
 

@@ -1,6 +1,6 @@
 ﻿namespace BeerHunter.views
 {
-    partial class Avaliacao
+    partial class telaAvaliacao
     {
         /// <summary>
         /// Required designer variable.
@@ -205,7 +205,7 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "label3";
             // 
-            // Avaliacao
+            // telaAvaliacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -220,9 +220,9 @@
             this.Controls.Add(this.btnVoltarTelaCadastro);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Avaliacao";
+            this.Name = "telaAvaliacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Avaliacao";
+            this.Text = "AvaliacaoTela";
             this.Load += new System.EventHandler(this.Avaliacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

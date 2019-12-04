@@ -32,20 +32,21 @@
             this.lblNomeUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblNomeCerveja = new System.Windows.Forms.Label();
+            this.lblNotaPreco = new System.Windows.Forms.Label();
+            this.lblNotaLocal = new System.Windows.Forms.Label();
+            this.lblNotaTemperatura = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtComentario = new System.Windows.Forms.RichTextBox();
+            this.txtNotaTemperatura = new System.Windows.Forms.TextBox();
+            this.txtNotaLocal = new System.Windows.Forms.TextBox();
+            this.txtNotaPreco = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnVoltarAvaliacao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,50 +88,60 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.lblNomeCerveja);
+            this.groupBox2.Controls.Add(this.lblNotaPreco);
+            this.groupBox2.Controls.Add(this.lblNotaLocal);
+            this.groupBox2.Controls.Add(this.lblNotaTemperatura);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.richTextBox1);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtComentario);
+            this.groupBox2.Controls.Add(this.txtNotaTemperatura);
+            this.groupBox2.Controls.Add(this.txtNotaLocal);
+            this.groupBox2.Controls.Add(this.txtNotaPreco);
             this.groupBox2.Controls.Add(this.pictureBox4);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox2);
             this.groupBox2.Location = new System.Drawing.Point(12, 206);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(688, 161);
+            this.groupBox2.Size = new System.Drawing.Size(688, 175);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Avaliar Cerveja";
             // 
-            // label5
+            // lblNomeCerveja
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 69);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "label5";
+            this.lblNomeCerveja.AutoSize = true;
+            this.lblNomeCerveja.Location = new System.Drawing.Point(165, 21);
+            this.lblNomeCerveja.Name = "lblNomeCerveja";
+            this.lblNomeCerveja.Size = new System.Drawing.Size(35, 13);
+            this.lblNomeCerveja.TabIndex = 12;
+            this.lblNomeCerveja.Text = "label5";
             // 
-            // label4
+            // lblNotaPreco
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(157, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "label4";
+            this.lblNotaPreco.AutoSize = true;
+            this.lblNotaPreco.Location = new System.Drawing.Point(34, 87);
+            this.lblNotaPreco.Name = "lblNotaPreco";
+            this.lblNotaPreco.Size = new System.Drawing.Size(35, 13);
+            this.lblNotaPreco.TabIndex = 11;
+            this.lblNotaPreco.Text = "label5";
             // 
-            // label3
+            // lblNotaLocal
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(286, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
+            this.lblNotaLocal.AutoSize = true;
+            this.lblNotaLocal.Location = new System.Drawing.Point(156, 87);
+            this.lblNotaLocal.Name = "lblNotaLocal";
+            this.lblNotaLocal.Size = new System.Drawing.Size(35, 13);
+            this.lblNotaLocal.TabIndex = 10;
+            this.lblNotaLocal.Text = "label4";
+            // 
+            // lblNotaTemperatura
+            // 
+            this.lblNotaTemperatura.AutoSize = true;
+            this.lblNotaTemperatura.Location = new System.Drawing.Point(285, 87);
+            this.lblNotaTemperatura.Name = "lblNotaTemperatura";
+            this.lblNotaTemperatura.Size = new System.Drawing.Size(35, 13);
+            this.lblNotaTemperatura.TabIndex = 9;
+            this.lblNotaTemperatura.Text = "label3";
             // 
             // label2
             // 
@@ -141,38 +152,38 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Comentario";
             // 
-            // richTextBox1
+            // txtComentario
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(450, 49);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(221, 70);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.txtComentario.Location = new System.Drawing.Point(450, 49);
+            this.txtComentario.Name = "txtComentario";
+            this.txtComentario.Size = new System.Drawing.Size(221, 70);
+            this.txtComentario.TabIndex = 7;
+            this.txtComentario.Text = "";
             // 
-            // textBox3
+            // txtNotaTemperatura
             // 
-            this.textBox3.Location = new System.Drawing.Point(267, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(54, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtNotaTemperatura.Location = new System.Drawing.Point(266, 143);
+            this.txtNotaTemperatura.Name = "txtNotaTemperatura";
+            this.txtNotaTemperatura.Size = new System.Drawing.Size(54, 20);
+            this.txtNotaTemperatura.TabIndex = 5;
             // 
-            // textBox2
+            // txtNotaLocal
             // 
-            this.textBox2.Location = new System.Drawing.Point(147, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(54, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtNotaLocal.Location = new System.Drawing.Point(146, 143);
+            this.txtNotaLocal.Name = "txtNotaLocal";
+            this.txtNotaLocal.Size = new System.Drawing.Size(54, 20);
+            this.txtNotaLocal.TabIndex = 4;
             // 
-            // textBox1
+            // txtNotaPreco
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(54, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtNotaPreco.Location = new System.Drawing.Point(25, 143);
+            this.txtNotaPreco.Name = "txtNotaPreco";
+            this.txtNotaPreco.Size = new System.Drawing.Size(54, 20);
+            this.txtNotaPreco.TabIndex = 3;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(247, 31);
+            this.pictureBox4.Location = new System.Drawing.Point(246, 49);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(100, 88);
             this.pictureBox4.TabIndex = 2;
@@ -180,7 +191,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(126, 31);
+            this.pictureBox3.Location = new System.Drawing.Point(125, 49);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 88);
             this.pictureBox3.TabIndex = 1;
@@ -188,7 +199,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(6, 31);
+            this.pictureBox2.Location = new System.Drawing.Point(5, 49);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(100, 88);
             this.pictureBox2.TabIndex = 0;
@@ -212,18 +223,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(365, 158);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.Location = new System.Drawing.Point(608, 373);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalvar.Location = new System.Drawing.Point(608, 387);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.TabIndex = 6;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnVoltarAvaliacao
             // 
-            this.btnVoltarAvaliacao.Location = new System.Drawing.Point(518, 373);
+            this.btnVoltarAvaliacao.Location = new System.Drawing.Point(518, 387);
             this.btnVoltarAvaliacao.Name = "btnVoltarAvaliacao";
             this.btnVoltarAvaliacao.Size = new System.Drawing.Size(75, 23);
             this.btnVoltarAvaliacao.TabIndex = 7;
@@ -235,15 +247,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 402);
+            this.ClientSize = new System.Drawing.Size(712, 422);
             this.Controls.Add(this.btnVoltarAvaliacao);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox1);
             this.Name = "RealizarAvaliacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RealizarAvaliacao";
+            this.Load += new System.EventHandler(this.RealizarAvaliacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -265,19 +278,20 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.TextBox txtNotaTemperatura;
+        private System.Windows.Forms.TextBox txtNotaLocal;
+        private System.Windows.Forms.TextBox txtNotaPreco;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNotaPreco;
+        private System.Windows.Forms.Label lblNotaLocal;
+        private System.Windows.Forms.Label lblNotaTemperatura;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtComentario;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnVoltarAvaliacao;
+        private System.Windows.Forms.Label lblNomeCerveja;
     }
 }
