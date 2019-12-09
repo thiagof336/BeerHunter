@@ -4,37 +4,120 @@ using System;
 using System.Collections;
 using System.Linq;
 using System.Text;
+using Dapper;
+using System.Collections.Generic;
+using Npgsql;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using System.Text.RegularExpressions;
 
 namespace BeerHunter.Service
 {
     public class UtilidadesService : IUtilidadeService
        {
         private readonly BeerHunterContext _context;
+        private static string conn;
+        private static Account account = new Account(
+                              "beerhunter",
+                              "375634236959668",
+                              "VGmQKBrynXhuSdKTv40Cee56_M0");
 
         public UtilidadesService()
         {
             _context = new BeerHunterContext();
+            conn = _context.Database.Connection.ConnectionString;
         }
-        public IEnumerable BuscaCervejaBanco(string busca)
+        public IEnumerable<MediaAvaliacoes> Medias(int cerveja_id)
         {
             try
             {
-                var query = from resultado in _context.Cerveja
-                            join p in _context.CadastraCerveja on resultado.CervejaID equals p.CervejaID.CervejaID
-                            join e in _context.Endereco on p.FornecedorID equals e.FornecedorID
-                            join f in _context.Fornecedor on e.FornecedorID.FornecedorID equals f.FornecedorID
-                            where resultado.NomeCerveja == busca
-                            select new
-                            {
-                                codigoCerveja = resultado.CervejaID,
-                                nomeCerveja = resultado.NomeCerveja,
-                                preco = p.PrecoCerveja,
-                                lupulo = resultado.Lupulo,
-                                teorAlcolico = resultado.TeorAlcoolico,
-                                nome = f.Nome
-                            };
+                IEnumerable<MediaAvaliacoes> avaliacoes = null;
+                using (var con = new NpgsqlConnection(conn))
+                {
+                    string sql = "select \"Preco_N\", \"Local_N\", \"Temperatura_N\" from dbo.\"Avaliacaos\" " +
+                        "join dbo.\"CadastraCervejas\" on \"CadastraCervejaID_CadastraCervejaID\" = \"CadastraCervejaID\" " +
+                        "join dbo.\"Cervejas\" on \"CervejaID_CervejaID\" = \"CervejaID\" "+
+                        "where \"CervejaID\" = "+cerveja_id;
+                    avaliacoes = con.Query<MediaAvaliacoes>(sql);
+                }
+                return avaliacoes;
+            }
+            catch (Exception)
+            {
 
-                return query.ToList();
+                return null;
+            }
+
+        }
+        public Boolean  ValidarNomeDeUsuario(string nomeUsuario)
+        {
+            try
+            {
+                int validaNome = 0;
+                
+                using(var con = new NpgsqlConnection(conn))
+                {
+                    string sql = "SELECT \"Nomeusuario\" "
+                                + "FROM dbo.\"Usuarios\""
+                                + "where \"Nomeusuario\" = '" + nomeUsuario + "'";
+                    validaNome = con.Query(sql).Count();
+                }
+                if(validaNome != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+                
+            }        
+        }
+        public Boolean ValidaLoginFornecedor(string loginUsuario)
+        {
+            try
+            {
+                int validaNome = 0;
+
+                using (var con = new NpgsqlConnection(conn))
+                {
+                    string sql = "SELECT \"Nome\" "
+                                + "FROM dbo.\"Fornecedors\""
+                                + "where \"Nome\" = '" + loginUsuario + "'";
+                    validaNome = con.Query(sql).Count();
+                }
+                if (validaNome != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch
+            {
+                return false;
+
+            }
+
+        }
+        public IEnumerable<Resultado> BuscaCervejaBanco(string busca,string coluna)
+        {
+            try
+            {
+                IEnumerable<Resultado> retorno = null;
+                using (var con = new NpgsqlConnection(conn))
+                {
+                    string sql = "SELECT c.\"CervejaID\", c.\"NomeCerveja\", cc.\"PrecoCerveja\", c.\"Lupulo\", c.\"TeorAlcoolico\",f.\"Nome\" "
+                            + "FROM dbo.\"Cervejas\" c "
+                            + "join dbo.\"CadastraCervejas\" cc on c.\"CervejaID\" = cc.\"CervejaID_CervejaID\" "
+                            + "join dbo.\"Enderecoes\" ed on ed.\"FornecedorID_FornecedorID\" = cc.\"FornecedorID_FornecedorID\" "
+                            + "join dbo.\"Fornecedors\" f on f.\"FornecedorID\" = cc.\"FornecedorID_FornecedorID\" "
+                            + "where "+ coluna +" = '"+busca+"'";
+
+                    retorno = con.Query<Resultado>(sql);
+                }
+                
+                return retorno;              
             }
             catch (Exception)
             {
@@ -75,9 +158,6 @@ namespace BeerHunter.Service
                                        comentario = a.Comentario
                                    };
             return historicoCerveja.ToList();
-
-
-            
         }
         public Fornecedor FornecedorExiste(String usuario,String senha)
         {
@@ -97,6 +177,28 @@ namespace BeerHunter.Service
             }
             return login;
         }
+        
+        public bool ValidarEmail(String email)
+        {
+            bool emailValido = false;
+
+            string emailRegex = string.Format("{0}{1}",
+                @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))",
+                @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-\w]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$");
+
+            try
+            {
+                emailValido = Regex.IsMatch(
+                    email,
+                    emailRegex);
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                emailValido = false;
+            }
+
+            return emailValido;
+        }
         public string Criptografia(string senha)
         {
             string ChaveCripto;
@@ -113,6 +215,33 @@ namespace BeerHunter.Service
 
             return chaveCripto;
         }
+        public ImagensNuvem uploadImagem(string url)
+        {
+            try
+            {
+                Cloudinary cloudinary = new Cloudinary(account);
+
+                var uploadParams = new ImageUploadParams()
+                {
+                    File = new FileDescription(url)
+                };
+                var uploadResult = cloudinary.Upload(uploadParams);
+
+                ImagensNuvem imagensNuvem = new ImagensNuvem();
+
+                imagensNuvem.EnderecoImagem = uploadResult.Uri.AbsoluteUri;
+                imagensNuvem.IdApi = uploadResult.PublicId;
+
+                imagensNuvem = _context.ImagensNuvems.Add(imagensNuvem);
+
+                return imagensNuvem;
+            }catch(Exception)
+            {                
+                return null;
+            }
+            
+        }
+
 
 
 

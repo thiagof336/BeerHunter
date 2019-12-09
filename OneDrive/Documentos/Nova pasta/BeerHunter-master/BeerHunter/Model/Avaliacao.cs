@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using BeerHunter.Service;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeerHunter.Model
 {
@@ -13,6 +9,7 @@ namespace BeerHunter.Model
         public int AvaliacaoID { get; set; }
         public virtual Usuario UsuarioID { get; set; }
         public virtual CadastraCerveja CadastraCervejaID { get; set; }
+        public virtual ImagensNuvem ImagensID { get; set; }
         public double Preco_N { get; set; }
         public double Local_N { get; set; }
         public double Temperatura_N { get; set; }

@@ -28,387 +28,555 @@ namespace BeerHunter.views
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
+        [Obsolete]
         private void InitializeComponent()
         {
-            this.label12 = new System.Windows.Forms.Label();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.radioUsuario = new System.Windows.Forms.RadioButton();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNomeUsuario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.picBoxUsuario = new System.Windows.Forms.PictureBox();
-            this.txtNomeFornecedor = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtLocalidade = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.radioFornecedor = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtLogin = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtSenhaFornecedor = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtCEP = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.picBoxFornecedor = new System.Windows.Forms.PictureBox();
+            this.btnMetroSalvar = new MetroFramework.Controls.MetroButton();
+            this.btnMetroVoltar = new MetroFramework.Controls.MetroButton();
+            this.txt_NomeUsuario = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Nome = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Senha = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Email = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Login = new MetroFramework.Controls.MetroTextBox();
+            this.txt_SenhaFornecedor = new MetroFramework.Controls.MetroTextBox();
+            this.txt_NomeFornecedor = new MetroFramework.Controls.MetroTextBox();
+            this.txt_CEP = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Logradouro = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Bairro = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Numero = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Estado = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Localidade = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFornecedor)).BeginInit();
             this.SuspendLayout();
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(181, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(186, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "SELECIONE O TIPO DE CADASTRO";
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Location = new System.Drawing.Point(175, 451);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(100, 23);
-            this.btnSalvar.TabIndex = 29;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.Location = new System.Drawing.Point(310, 451);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(100, 23);
-            this.btnVoltar.TabIndex = 30;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
             // radioUsuario
             // 
             this.radioUsuario.AutoSize = true;
-            this.radioUsuario.Location = new System.Drawing.Point(24, 39);
+            this.radioUsuario.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioUsuario.Location = new System.Drawing.Point(34, 184);
             this.radioUsuario.Name = "radioUsuario";
-            this.radioUsuario.Size = new System.Drawing.Size(61, 17);
+            this.radioUsuario.Size = new System.Drawing.Size(65, 19);
             this.radioUsuario.TabIndex = 0;
-            this.radioUsuario.TabStop = true;
             this.radioUsuario.Text = "Usuario";
             this.radioUsuario.UseVisualStyleBackColor = true;
             this.radioUsuario.CheckedChanged += new System.EventHandler(this.Usuario_CheckedChanged);
             // 
-            // txtNome
-            // 
-            this.txtNome.Enabled = false;
-            this.txtNome.Location = new System.Drawing.Point(320, 72);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(221, 20);
-            this.txtNome.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(317, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Nome";
-            // 
-            // txtNomeUsuario
-            // 
-            this.txtNomeUsuario.Enabled = false;
-            this.txtNomeUsuario.Location = new System.Drawing.Point(184, 73);
-            this.txtNomeUsuario.Name = "txtNomeUsuario";
-            this.txtNomeUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtNomeUsuario.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(181, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Nome Usuario";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(320, 117);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(221, 20);
-            this.txtEmail.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(317, 101);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Email";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Enabled = false;
-            this.txtSenha.Location = new System.Drawing.Point(184, 117);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(100, 20);
-            this.txtSenha.TabIndex = 8;
-            this.txtSenha.UseSystemPasswordChar = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(181, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Senha";
-            // 
             // picBoxUsuario
             // 
             this.picBoxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxUsuario.Location = new System.Drawing.Point(33, 73);
+            this.picBoxUsuario.Location = new System.Drawing.Point(23, 63);
             this.picBoxUsuario.Name = "picBoxUsuario";
-            this.picBoxUsuario.Size = new System.Drawing.Size(88, 97);
+            this.picBoxUsuario.Size = new System.Drawing.Size(100, 115);
             this.picBoxUsuario.TabIndex = 10;
             this.picBoxUsuario.TabStop = false;
             this.picBoxUsuario.Click += new System.EventHandler(this.picBoxUsuario_Click);
             // 
-            // txtNomeFornecedor
-            // 
-            this.txtNomeFornecedor.Enabled = false;
-            this.txtNomeFornecedor.Location = new System.Drawing.Point(180, 231);
-            this.txtNomeFornecedor.Name = "txtNomeFornecedor";
-            this.txtNomeFornecedor.Size = new System.Drawing.Size(95, 20);
-            this.txtNomeFornecedor.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(177, 215);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Nome Fornecedor";
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Enabled = false;
-            this.txtBairro.Location = new System.Drawing.Point(180, 319);
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(193, 20);
-            this.txtBairro.TabIndex = 12;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(177, 306);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Bairro";
-            // 
-            // txtLocalidade
-            // 
-            this.txtLocalidade.Enabled = false;
-            this.txtLocalidade.Location = new System.Drawing.Point(180, 369);
-            this.txtLocalidade.Name = "txtLocalidade";
-            this.txtLocalidade.Size = new System.Drawing.Size(193, 20);
-            this.txtLocalidade.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(177, 353);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Localidade";
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(449, 319);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(92, 20);
-            this.txtEstado.TabIndex = 18;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(447, 303);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Estado";
-            // 
-            // txtLogradouro
-            // 
-            this.txtLogradouro.Enabled = false;
-            this.txtLogradouro.Location = new System.Drawing.Point(290, 278);
-            this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.Size = new System.Drawing.Size(251, 20);
-            this.txtLogradouro.TabIndex = 20;
-            // 
             // radioFornecedor
             // 
             this.radioFornecedor.AutoSize = true;
-            this.radioFornecedor.Location = new System.Drawing.Point(25, 217);
+            this.radioFornecedor.Font = new System.Drawing.Font("Open Sans", 8.25F);
+            this.radioFornecedor.Location = new System.Drawing.Point(27, 353);
             this.radioFornecedor.Name = "radioFornecedor";
-            this.radioFornecedor.Size = new System.Drawing.Size(79, 17);
+            this.radioFornecedor.Size = new System.Drawing.Size(84, 19);
             this.radioFornecedor.TabIndex = 1;
-            this.radioFornecedor.TabStop = true;
             this.radioFornecedor.Text = "Fornecedor";
             this.radioFornecedor.UseVisualStyleBackColor = true;
             this.radioFornecedor.CheckedChanged += new System.EventHandler(this.RadioFornecedor_CheckedChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(287, 262);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Logradouro";
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Enabled = false;
-            this.txtNumero.Location = new System.Drawing.Point(384, 319);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(50, 20);
-            this.txtNumero.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(381, 303);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 13);
-            this.label11.TabIndex = 23;
-            this.label11.Text = "Numero";
-            // 
-            // txtLogin
-            // 
-            this.txtLogin.Enabled = false;
-            this.txtLogin.Location = new System.Drawing.Point(290, 231);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(95, 20);
-            this.txtLogin.TabIndex = 25;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(287, 215);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 13);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Login";
-            // 
-            // txtSenhaFornecedor
-            // 
-            this.txtSenhaFornecedor.Enabled = false;
-            this.txtSenhaFornecedor.Location = new System.Drawing.Point(399, 231);
-            this.txtSenhaFornecedor.Name = "txtSenhaFornecedor";
-            this.txtSenhaFornecedor.Size = new System.Drawing.Size(142, 20);
-            this.txtSenhaFornecedor.TabIndex = 27;
-            this.txtSenhaFornecedor.UseSystemPasswordChar = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(396, 215);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(38, 13);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Senha";
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.Enabled = false;
-            this.txtCEP.Location = new System.Drawing.Point(180, 278);
-            this.txtCEP.MaxLength = 8;
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(95, 20);
-            this.txtCEP.TabIndex = 31;
-            this.txtCEP.TextChanged += new System.EventHandler(this.txtCEP_TextChanged);
-            this.txtCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCEP_KeyPress);
-            this.txtCEP.Leave += new System.EventHandler(this.txtCEP_Leave);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(177, 262);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
-            this.label5.TabIndex = 32;
-            this.label5.Text = "CEP";
             // 
             // picBoxFornecedor
             // 
             this.picBoxFornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picBoxFornecedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBoxFornecedor.Location = new System.Drawing.Point(34, 258);
+            this.picBoxFornecedor.Location = new System.Drawing.Point(23, 232);
             this.picBoxFornecedor.Name = "picBoxFornecedor";
-            this.picBoxFornecedor.Size = new System.Drawing.Size(88, 97);
+            this.picBoxFornecedor.Size = new System.Drawing.Size(100, 115);
             this.picBoxFornecedor.TabIndex = 11;
             this.picBoxFornecedor.TabStop = false;
             this.picBoxFornecedor.Click += new System.EventHandler(this.picBoxFornecedor_Click);
+            // 
+            // btnMetroSalvar
+            // 
+            this.btnMetroSalvar.Location = new System.Drawing.Point(169, 470);
+            this.btnMetroSalvar.Name = "btnMetroSalvar";
+            this.btnMetroSalvar.Size = new System.Drawing.Size(113, 31);
+            this.btnMetroSalvar.TabIndex = 33;
+            this.btnMetroSalvar.Text = "SALVAR";
+            this.btnMetroSalvar.UseSelectable = true;
+            this.btnMetroSalvar.Click += new System.EventHandler(this.btnMetroSalvar_Click);
+            // 
+            // btnMetroVoltar
+            // 
+            this.btnMetroVoltar.Location = new System.Drawing.Point(321, 470);
+            this.btnMetroVoltar.Name = "btnMetroVoltar";
+            this.btnMetroVoltar.Size = new System.Drawing.Size(100, 31);
+            this.btnMetroVoltar.TabIndex = 34;
+            this.btnMetroVoltar.Text = "VOLTAR";
+            this.btnMetroVoltar.UseSelectable = true;
+            this.btnMetroVoltar.Click += new System.EventHandler(this.btnMetroVoltar_Click);
+            // 
+            // txt_NomeUsuario
+            // 
+            // 
+            // 
+            // 
+            this.txt_NomeUsuario.CustomButton.Image = null;
+            this.txt_NomeUsuario.CustomButton.Location = new System.Drawing.Point(106, 1);
+            this.txt_NomeUsuario.CustomButton.Name = "";
+            this.txt_NomeUsuario.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_NomeUsuario.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_NomeUsuario.CustomButton.TabIndex = 1;
+            this.txt_NomeUsuario.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_NomeUsuario.CustomButton.UseSelectable = true;
+            this.txt_NomeUsuario.CustomButton.Visible = false;
+            this.txt_NomeUsuario.Lines = new string[0];
+            this.txt_NomeUsuario.Location = new System.Drawing.Point(136, 81);
+            this.txt_NomeUsuario.MaxLength = 32767;
+            this.txt_NomeUsuario.Name = "txt_NomeUsuario";
+            this.txt_NomeUsuario.PasswordChar = '\0';
+            this.txt_NomeUsuario.PromptText = "Nome Usuario";
+            this.txt_NomeUsuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_NomeUsuario.SelectedText = "";
+            this.txt_NomeUsuario.SelectionLength = 0;
+            this.txt_NomeUsuario.SelectionStart = 0;
+            this.txt_NomeUsuario.ShortcutsEnabled = true;
+            this.txt_NomeUsuario.Size = new System.Drawing.Size(128, 23);
+            this.txt_NomeUsuario.TabIndex = 35;
+            this.txt_NomeUsuario.UseSelectable = true;
+            this.txt_NomeUsuario.WaterMark = "Nome Usuario";
+            this.txt_NomeUsuario.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_NomeUsuario.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NomeUsuario.Leave += new System.EventHandler(this.txt_NomeUsuario_Leave);
+            // 
+            // txt_Nome
+            // 
+            // 
+            // 
+            // 
+            this.txt_Nome.CustomButton.Image = null;
+            this.txt_Nome.CustomButton.Location = new System.Drawing.Point(238, 1);
+            this.txt_Nome.CustomButton.Name = "";
+            this.txt_Nome.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Nome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Nome.CustomButton.TabIndex = 1;
+            this.txt_Nome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Nome.CustomButton.UseSelectable = true;
+            this.txt_Nome.CustomButton.Visible = false;
+            this.txt_Nome.Lines = new string[0];
+            this.txt_Nome.Location = new System.Drawing.Point(281, 81);
+            this.txt_Nome.MaxLength = 32767;
+            this.txt_Nome.Name = "txt_Nome";
+            this.txt_Nome.PasswordChar = '\0';
+            this.txt_Nome.PromptText = "Nome";
+            this.txt_Nome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Nome.SelectedText = "";
+            this.txt_Nome.SelectionLength = 0;
+            this.txt_Nome.SelectionStart = 0;
+            this.txt_Nome.ShortcutsEnabled = true;
+            this.txt_Nome.Size = new System.Drawing.Size(260, 23);
+            this.txt_Nome.TabIndex = 36;
+            this.txt_Nome.UseSelectable = true;
+            this.txt_Nome.WaterMark = "Nome";
+            this.txt_Nome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Nome.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_Senha
+            // 
+            // 
+            // 
+            // 
+            this.txt_Senha.CustomButton.Image = null;
+            this.txt_Senha.CustomButton.Location = new System.Drawing.Point(106, 1);
+            this.txt_Senha.CustomButton.Name = "";
+            this.txt_Senha.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Senha.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Senha.CustomButton.TabIndex = 1;
+            this.txt_Senha.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Senha.CustomButton.UseSelectable = true;
+            this.txt_Senha.CustomButton.Visible = false;
+            this.txt_Senha.Lines = new string[0];
+            this.txt_Senha.Location = new System.Drawing.Point(136, 123);
+            this.txt_Senha.MaxLength = 32767;
+            this.txt_Senha.Name = "txt_Senha";
+            this.txt_Senha.PasswordChar = '●';
+            this.txt_Senha.PromptText = "Senha";
+            this.txt_Senha.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Senha.SelectedText = "";
+            this.txt_Senha.SelectionLength = 0;
+            this.txt_Senha.SelectionStart = 0;
+            this.txt_Senha.ShortcutsEnabled = true;
+            this.txt_Senha.Size = new System.Drawing.Size(128, 23);
+            this.txt_Senha.TabIndex = 37;
+            this.txt_Senha.UseSelectable = true;
+            this.txt_Senha.UseSystemPasswordChar = true;
+            this.txt_Senha.WaterMark = "Senha";
+            this.txt_Senha.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Senha.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_Email
+            // 
+            // 
+            // 
+            // 
+            this.txt_Email.CustomButton.Image = null;
+            this.txt_Email.CustomButton.Location = new System.Drawing.Point(238, 1);
+            this.txt_Email.CustomButton.Name = "";
+            this.txt_Email.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Email.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Email.CustomButton.TabIndex = 1;
+            this.txt_Email.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Email.CustomButton.UseSelectable = true;
+            this.txt_Email.CustomButton.Visible = false;
+            this.txt_Email.Lines = new string[0];
+            this.txt_Email.Location = new System.Drawing.Point(281, 123);
+            this.txt_Email.MaxLength = 32767;
+            this.txt_Email.Name = "txt_Email";
+            this.txt_Email.PasswordChar = '\0';
+            this.txt_Email.PromptText = "Email";
+            this.txt_Email.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Email.SelectedText = "";
+            this.txt_Email.SelectionLength = 0;
+            this.txt_Email.SelectionStart = 0;
+            this.txt_Email.ShortcutsEnabled = true;
+            this.txt_Email.Size = new System.Drawing.Size(260, 23);
+            this.txt_Email.TabIndex = 38;
+            this.txt_Email.UseSelectable = true;
+            this.txt_Email.WaterMark = "Email";
+            this.txt_Email.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Email.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Email.Leave += new System.EventHandler(this.txt_Email_Leave);
+            // 
+            // txt_Login
+            // 
+            // 
+            // 
+            // 
+            this.txt_Login.CustomButton.Image = null;
+            this.txt_Login.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.txt_Login.CustomButton.Name = "";
+            this.txt_Login.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Login.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Login.CustomButton.TabIndex = 1;
+            this.txt_Login.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Login.CustomButton.UseSelectable = true;
+            this.txt_Login.CustomButton.Visible = false;
+            this.txt_Login.Lines = new string[0];
+            this.txt_Login.Location = new System.Drawing.Point(136, 279);
+            this.txt_Login.MaxLength = 32767;
+            this.txt_Login.Name = "txt_Login";
+            this.txt_Login.PasswordChar = '\0';
+            this.txt_Login.PromptText = "Nome Login";
+            this.txt_Login.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Login.SelectedText = "";
+            this.txt_Login.SelectionLength = 0;
+            this.txt_Login.SelectionStart = 0;
+            this.txt_Login.ShortcutsEnabled = true;
+            this.txt_Login.Size = new System.Drawing.Size(200, 23);
+            this.txt_Login.TabIndex = 39;
+            this.txt_Login.UseSelectable = true;
+            this.txt_Login.WaterMark = "Nome Login";
+            this.txt_Login.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Login.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Login.Leave += new System.EventHandler(this.txt_Login_Leave);
+            // 
+            // txt_SenhaFornecedor
+            // 
+            // 
+            // 
+            // 
+            this.txt_SenhaFornecedor.CustomButton.Image = null;
+            this.txt_SenhaFornecedor.CustomButton.Location = new System.Drawing.Point(178, 1);
+            this.txt_SenhaFornecedor.CustomButton.Name = "";
+            this.txt_SenhaFornecedor.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_SenhaFornecedor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_SenhaFornecedor.CustomButton.TabIndex = 1;
+            this.txt_SenhaFornecedor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_SenhaFornecedor.CustomButton.UseSelectable = true;
+            this.txt_SenhaFornecedor.CustomButton.Visible = false;
+            this.txt_SenhaFornecedor.Lines = new string[0];
+            this.txt_SenhaFornecedor.Location = new System.Drawing.Point(342, 279);
+            this.txt_SenhaFornecedor.MaxLength = 32767;
+            this.txt_SenhaFornecedor.Name = "txt_SenhaFornecedor";
+            this.txt_SenhaFornecedor.PasswordChar = '●';
+            this.txt_SenhaFornecedor.PromptText = "Senha";
+            this.txt_SenhaFornecedor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_SenhaFornecedor.SelectedText = "";
+            this.txt_SenhaFornecedor.SelectionLength = 0;
+            this.txt_SenhaFornecedor.SelectionStart = 0;
+            this.txt_SenhaFornecedor.ShortcutsEnabled = true;
+            this.txt_SenhaFornecedor.Size = new System.Drawing.Size(200, 23);
+            this.txt_SenhaFornecedor.TabIndex = 40;
+            this.txt_SenhaFornecedor.UseSelectable = true;
+            this.txt_SenhaFornecedor.UseSystemPasswordChar = true;
+            this.txt_SenhaFornecedor.WaterMark = "Senha";
+            this.txt_SenhaFornecedor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_SenhaFornecedor.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_NomeFornecedor
+            // 
+            // 
+            // 
+            // 
+            this.txt_NomeFornecedor.CustomButton.Image = null;
+            this.txt_NomeFornecedor.CustomButton.Location = new System.Drawing.Point(384, 1);
+            this.txt_NomeFornecedor.CustomButton.Name = "";
+            this.txt_NomeFornecedor.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_NomeFornecedor.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_NomeFornecedor.CustomButton.TabIndex = 1;
+            this.txt_NomeFornecedor.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_NomeFornecedor.CustomButton.UseSelectable = true;
+            this.txt_NomeFornecedor.CustomButton.Visible = false;
+            this.txt_NomeFornecedor.ForeColor = System.Drawing.Color.Black;
+            this.txt_NomeFornecedor.Lines = new string[0];
+            this.txt_NomeFornecedor.Location = new System.Drawing.Point(136, 250);
+            this.txt_NomeFornecedor.MaxLength = 32767;
+            this.txt_NomeFornecedor.Name = "txt_NomeFornecedor";
+            this.txt_NomeFornecedor.PasswordChar = '\0';
+            this.txt_NomeFornecedor.PromptText = "Nome Fornecedor";
+            this.txt_NomeFornecedor.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_NomeFornecedor.SelectedText = "";
+            this.txt_NomeFornecedor.SelectionLength = 0;
+            this.txt_NomeFornecedor.SelectionStart = 0;
+            this.txt_NomeFornecedor.ShortcutsEnabled = true;
+            this.txt_NomeFornecedor.Size = new System.Drawing.Size(406, 23);
+            this.txt_NomeFornecedor.TabIndex = 41;
+            this.txt_NomeFornecedor.UseSelectable = true;
+            this.txt_NomeFornecedor.WaterMark = "Nome Fornecedor";
+            this.txt_NomeFornecedor.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_NomeFornecedor.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_CEP
+            // 
+            // 
+            // 
+            // 
+            this.txt_CEP.CustomButton.Image = null;
+            this.txt_CEP.CustomButton.Location = new System.Drawing.Point(95, 1);
+            this.txt_CEP.CustomButton.Name = "";
+            this.txt_CEP.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_CEP.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_CEP.CustomButton.TabIndex = 1;
+            this.txt_CEP.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_CEP.CustomButton.UseSelectable = true;
+            this.txt_CEP.CustomButton.Visible = false;
+            this.txt_CEP.Lines = new string[0];
+            this.txt_CEP.Location = new System.Drawing.Point(281, 324);
+            this.txt_CEP.MaxLength = 32767;
+            this.txt_CEP.Name = "txt_CEP";
+            this.txt_CEP.PasswordChar = '\0';
+            this.txt_CEP.PromptText = "CEP";
+            this.txt_CEP.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_CEP.SelectedText = "";
+            this.txt_CEP.SelectionLength = 0;
+            this.txt_CEP.SelectionStart = 0;
+            this.txt_CEP.ShortcutsEnabled = true;
+            this.txt_CEP.Size = new System.Drawing.Size(117, 23);
+            this.txt_CEP.TabIndex = 42;
+            this.txt_CEP.UseSelectable = true;
+            this.txt_CEP.WaterMark = "CEP";
+            this.txt_CEP.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_CEP.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_CEP_KeyPress);
+            this.txt_CEP.Leave += new System.EventHandler(this.txt_CEP_Leave);
+            // 
+            // txt_Logradouro
+            // 
+            // 
+            // 
+            // 
+            this.txt_Logradouro.CustomButton.Image = null;
+            this.txt_Logradouro.CustomButton.Location = new System.Drawing.Point(384, 1);
+            this.txt_Logradouro.CustomButton.Name = "";
+            this.txt_Logradouro.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Logradouro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Logradouro.CustomButton.TabIndex = 1;
+            this.txt_Logradouro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Logradouro.CustomButton.UseSelectable = true;
+            this.txt_Logradouro.CustomButton.Visible = false;
+            this.txt_Logradouro.Lines = new string[0];
+            this.txt_Logradouro.Location = new System.Drawing.Point(135, 351);
+            this.txt_Logradouro.MaxLength = 32767;
+            this.txt_Logradouro.Name = "txt_Logradouro";
+            this.txt_Logradouro.PasswordChar = '\0';
+            this.txt_Logradouro.PromptText = "Endereco";
+            this.txt_Logradouro.ReadOnly = true;
+            this.txt_Logradouro.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Logradouro.SelectedText = "";
+            this.txt_Logradouro.SelectionLength = 0;
+            this.txt_Logradouro.SelectionStart = 0;
+            this.txt_Logradouro.ShortcutsEnabled = true;
+            this.txt_Logradouro.Size = new System.Drawing.Size(406, 23);
+            this.txt_Logradouro.TabIndex = 43;
+            this.txt_Logradouro.UseSelectable = true;
+            this.txt_Logradouro.WaterMark = "Endereco";
+            this.txt_Logradouro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Logradouro.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_Bairro
+            // 
+            // 
+            // 
+            // 
+            this.txt_Bairro.CustomButton.Image = null;
+            this.txt_Bairro.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.txt_Bairro.CustomButton.Name = "";
+            this.txt_Bairro.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Bairro.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Bairro.CustomButton.TabIndex = 1;
+            this.txt_Bairro.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Bairro.CustomButton.UseSelectable = true;
+            this.txt_Bairro.CustomButton.Visible = false;
+            this.txt_Bairro.Lines = new string[0];
+            this.txt_Bairro.Location = new System.Drawing.Point(135, 380);
+            this.txt_Bairro.MaxLength = 32767;
+            this.txt_Bairro.Name = "txt_Bairro";
+            this.txt_Bairro.PasswordChar = '\0';
+            this.txt_Bairro.PromptText = "Bairro";
+            this.txt_Bairro.ReadOnly = true;
+            this.txt_Bairro.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Bairro.SelectedText = "";
+            this.txt_Bairro.SelectionLength = 0;
+            this.txt_Bairro.SelectionStart = 0;
+            this.txt_Bairro.ShortcutsEnabled = true;
+            this.txt_Bairro.Size = new System.Drawing.Size(263, 23);
+            this.txt_Bairro.TabIndex = 44;
+            this.txt_Bairro.UseSelectable = true;
+            this.txt_Bairro.WaterMark = "Bairro";
+            this.txt_Bairro.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Bairro.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_Numero
+            // 
+            // 
+            // 
+            // 
+            this.txt_Numero.CustomButton.Image = null;
+            this.txt_Numero.CustomButton.Location = new System.Drawing.Point(115, 1);
+            this.txt_Numero.CustomButton.Name = "";
+            this.txt_Numero.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Numero.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Numero.CustomButton.TabIndex = 1;
+            this.txt_Numero.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Numero.CustomButton.UseSelectable = true;
+            this.txt_Numero.CustomButton.Visible = false;
+            this.txt_Numero.Lines = new string[0];
+            this.txt_Numero.Location = new System.Drawing.Point(404, 380);
+            this.txt_Numero.MaxLength = 32767;
+            this.txt_Numero.Name = "txt_Numero";
+            this.txt_Numero.PasswordChar = '\0';
+            this.txt_Numero.PromptText = "Numero";
+            this.txt_Numero.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Numero.SelectedText = "";
+            this.txt_Numero.SelectionLength = 0;
+            this.txt_Numero.SelectionStart = 0;
+            this.txt_Numero.ShortcutsEnabled = true;
+            this.txt_Numero.Size = new System.Drawing.Size(137, 23);
+            this.txt_Numero.TabIndex = 45;
+            this.txt_Numero.UseSelectable = true;
+            this.txt_Numero.WaterMark = "Numero";
+            this.txt_Numero.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Numero.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_Estado
+            // 
+            // 
+            // 
+            // 
+            this.txt_Estado.CustomButton.Image = null;
+            this.txt_Estado.CustomButton.Location = new System.Drawing.Point(71, 1);
+            this.txt_Estado.CustomButton.Name = "";
+            this.txt_Estado.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Estado.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Estado.CustomButton.TabIndex = 1;
+            this.txt_Estado.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Estado.CustomButton.UseSelectable = true;
+            this.txt_Estado.CustomButton.Visible = false;
+            this.txt_Estado.Lines = new string[0];
+            this.txt_Estado.Location = new System.Drawing.Point(135, 409);
+            this.txt_Estado.MaxLength = 32767;
+            this.txt_Estado.Name = "txt_Estado";
+            this.txt_Estado.PasswordChar = '\0';
+            this.txt_Estado.PromptText = "Estado";
+            this.txt_Estado.ReadOnly = true;
+            this.txt_Estado.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Estado.SelectedText = "";
+            this.txt_Estado.SelectionLength = 0;
+            this.txt_Estado.SelectionStart = 0;
+            this.txt_Estado.ShortcutsEnabled = true;
+            this.txt_Estado.Size = new System.Drawing.Size(93, 23);
+            this.txt_Estado.TabIndex = 46;
+            this.txt_Estado.UseSelectable = true;
+            this.txt_Estado.WaterMark = "Estado";
+            this.txt_Estado.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Estado.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // txt_Localidade
+            // 
+            // 
+            // 
+            // 
+            this.txt_Localidade.CustomButton.Image = null;
+            this.txt_Localidade.CustomButton.Location = new System.Drawing.Point(274, 1);
+            this.txt_Localidade.CustomButton.Name = "";
+            this.txt_Localidade.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Localidade.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Localidade.CustomButton.TabIndex = 1;
+            this.txt_Localidade.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Localidade.CustomButton.UseSelectable = true;
+            this.txt_Localidade.CustomButton.Visible = false;
+            this.txt_Localidade.Lines = new string[0];
+            this.txt_Localidade.Location = new System.Drawing.Point(245, 409);
+            this.txt_Localidade.MaxLength = 32767;
+            this.txt_Localidade.Name = "txt_Localidade";
+            this.txt_Localidade.PasswordChar = '\0';
+            this.txt_Localidade.PromptText = "Localidade";
+            this.txt_Localidade.ReadOnly = true;
+            this.txt_Localidade.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Localidade.SelectedText = "";
+            this.txt_Localidade.SelectionLength = 0;
+            this.txt_Localidade.SelectionStart = 0;
+            this.txt_Localidade.ShortcutsEnabled = true;
+            this.txt_Localidade.Size = new System.Drawing.Size(296, 23);
+            this.txt_Localidade.TabIndex = 47;
+            this.txt_Localidade.UseSelectable = true;
+            this.txt_Localidade.WaterMark = "Localidade";
+            this.txt_Localidade.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Localidade.WaterMarkFont = new System.Drawing.Font("Open Sans Light", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 511);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnVoltar);
+            this.ClientSize = new System.Drawing.Size(572, 540);
+            this.Controls.Add(this.txt_Localidade);
+            this.Controls.Add(this.txt_Estado);
+            this.Controls.Add(this.txt_Numero);
+            this.Controls.Add(this.txt_Bairro);
+            this.Controls.Add(this.txt_Logradouro);
+            this.Controls.Add(this.txt_CEP);
+            this.Controls.Add(this.txt_NomeFornecedor);
+            this.Controls.Add(this.txt_SenhaFornecedor);
+            this.Controls.Add(this.txt_Login);
+            this.Controls.Add(this.txt_Email);
+            this.Controls.Add(this.txt_Senha);
+            this.Controls.Add(this.txt_Nome);
+            this.Controls.Add(this.txt_NomeUsuario);
+            this.Controls.Add(this.btnMetroVoltar);
+            this.Controls.Add(this.btnMetroSalvar);
             this.Controls.Add(this.picBoxFornecedor);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.picBoxUsuario);
-            this.Controls.Add(this.txtCEP);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtSenhaFornecedor);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtLogin);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txtNumero);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.radioUsuario);
             this.Controls.Add(this.radioFornecedor);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtLogradouro);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtNomeUsuario);
-            this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtNomeFornecedor);
-            this.Controls.Add(this.txtLocalidade);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtBairro);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Cadastro";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "cadastro";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
+            this.TransparencyKey = System.Drawing.Color.Orange;
             this.Load += new System.EventHandler(this.Cadastro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxUsuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFornecedor)).EndInit();
@@ -418,38 +586,24 @@ namespace BeerHunter.views
         }
 
         #endregion
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.RadioButton radioUsuario;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNomeUsuario;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox picBoxUsuario;
-        private System.Windows.Forms.TextBox txtNomeFornecedor;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtBairro;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtLocalidade;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtEstado;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtLogradouro;
         private System.Windows.Forms.RadioButton radioFornecedor;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNumero;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtLogin;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtSenhaFornecedor;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtCEP;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox picBoxFornecedor;
+        private MetroFramework.Controls.MetroButton btnMetroSalvar;
+        private MetroFramework.Controls.MetroButton btnMetroVoltar;
+        private MetroFramework.Controls.MetroTextBox txt_NomeUsuario;
+        private MetroFramework.Controls.MetroTextBox txt_Nome;
+        private MetroFramework.Controls.MetroTextBox txt_Senha;
+        private MetroFramework.Controls.MetroTextBox txt_Email;
+        private MetroFramework.Controls.MetroTextBox txt_Login;
+        private MetroFramework.Controls.MetroTextBox txt_SenhaFornecedor;
+        private MetroFramework.Controls.MetroTextBox txt_NomeFornecedor;
+        private MetroFramework.Controls.MetroTextBox txt_CEP;
+        private MetroFramework.Controls.MetroTextBox txt_Logradouro;
+        private MetroFramework.Controls.MetroTextBox txt_Bairro;
+        private MetroFramework.Controls.MetroTextBox txt_Numero;
+        private MetroFramework.Controls.MetroTextBox txt_Estado;
+        private MetroFramework.Controls.MetroTextBox txt_Localidade;
     }
 }

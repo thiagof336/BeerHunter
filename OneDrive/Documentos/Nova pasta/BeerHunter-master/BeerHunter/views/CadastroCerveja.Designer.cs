@@ -28,230 +28,288 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtTipo = new System.Windows.Forms.TextBox();
-            this.txtTeoralcolico = new System.Windows.Forms.TextBox();
-            this.txtLupulo = new System.Windows.Forms.TextBox();
-            this.txtFabricante = new System.Windows.Forms.TextBox();
             this.picboxLogoCerveja = new System.Windows.Forms.PictureBox();
-            this.btnAbrirImagem = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtPreco = new System.Windows.Forms.TextBox();
-            this.btnVoltarMenuPrincipal = new System.Windows.Forms.Button();
+            this.txt_Nome = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Tipo = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Teoralcolico = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Lupulo = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Fabricante = new MetroFramework.Controls.MetroTextBox();
+            this.txt_Preco = new MetroFramework.Controls.MetroTextBox();
+            this.btnCarregatFoto = new MetroFramework.Controls.MetroButton();
+            this.btnVoltarMenu = new MetroFramework.Controls.MetroButton();
+            this.btnCadastrarCerveja = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogoCerveja)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(164, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "CADASTRO DE CERVEJAS";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 103);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nome";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Tipo";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 189);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Teor Alcolico";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(34, 232);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Lupulo";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 271);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Fabricante";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Location = new System.Drawing.Point(116, 104);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
-            this.txtNome.TabIndex = 6;
-            // 
-            // txtTipo
-            // 
-            this.txtTipo.Location = new System.Drawing.Point(116, 144);
-            this.txtTipo.Name = "txtTipo";
-            this.txtTipo.Size = new System.Drawing.Size(100, 20);
-            this.txtTipo.TabIndex = 7;
-            // 
-            // txtTeoralcolico
-            // 
-            this.txtTeoralcolico.Location = new System.Drawing.Point(116, 186);
-            this.txtTeoralcolico.Name = "txtTeoralcolico";
-            this.txtTeoralcolico.Size = new System.Drawing.Size(100, 20);
-            this.txtTeoralcolico.TabIndex = 8;
-            // 
-            // txtLupulo
-            // 
-            this.txtLupulo.Location = new System.Drawing.Point(116, 229);
-            this.txtLupulo.Name = "txtLupulo";
-            this.txtLupulo.Size = new System.Drawing.Size(100, 20);
-            this.txtLupulo.TabIndex = 9;
-            // 
-            // txtFabricante
-            // 
-            this.txtFabricante.Location = new System.Drawing.Point(116, 268);
-            this.txtFabricante.Name = "txtFabricante";
-            this.txtFabricante.Size = new System.Drawing.Size(100, 20);
-            this.txtFabricante.TabIndex = 10;
-            // 
             // picboxLogoCerveja
             // 
-            this.picboxLogoCerveja.Location = new System.Drawing.Point(281, 103);
+            this.picboxLogoCerveja.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picboxLogoCerveja.Location = new System.Drawing.Point(257, 85);
             this.picboxLogoCerveja.Name = "picboxLogoCerveja";
-            this.picboxLogoCerveja.Size = new System.Drawing.Size(171, 225);
+            this.picboxLogoCerveja.Size = new System.Drawing.Size(231, 265);
             this.picboxLogoCerveja.TabIndex = 11;
             this.picboxLogoCerveja.TabStop = false;
             // 
-            // btnAbrirImagem
+            // txt_Nome
             // 
-            this.btnAbrirImagem.Location = new System.Drawing.Point(325, 334);
-            this.btnAbrirImagem.Name = "btnAbrirImagem";
-            this.btnAbrirImagem.Size = new System.Drawing.Size(75, 23);
-            this.btnAbrirImagem.TabIndex = 12;
-            this.btnAbrirImagem.Text = "Abrir";
-            this.btnAbrirImagem.UseVisualStyleBackColor = true;
-            this.btnAbrirImagem.Click += new System.EventHandler(this.btnAbrirImagem_Click);
             // 
-            // button2
             // 
-            this.button2.Location = new System.Drawing.Point(65, 405);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cadastrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label7
+            this.txt_Nome.CustomButton.Image = null;
+            this.txt_Nome.CustomButton.Location = new System.Drawing.Point(162, 1);
+            this.txt_Nome.CustomButton.Name = "";
+            this.txt_Nome.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Nome.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Nome.CustomButton.TabIndex = 1;
+            this.txt_Nome.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Nome.CustomButton.UseSelectable = true;
+            this.txt_Nome.CustomButton.Visible = false;
+            this.txt_Nome.Lines = new string[0];
+            this.txt_Nome.Location = new System.Drawing.Point(29, 96);
+            this.txt_Nome.MaxLength = 32767;
+            this.txt_Nome.Name = "txt_Nome";
+            this.txt_Nome.PasswordChar = '\0';
+            this.txt_Nome.PromptText = "Nome Cerveja";
+            this.txt_Nome.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Nome.SelectedText = "";
+            this.txt_Nome.SelectionLength = 0;
+            this.txt_Nome.SelectionStart = 0;
+            this.txt_Nome.ShortcutsEnabled = true;
+            this.txt_Nome.Size = new System.Drawing.Size(184, 23);
+            this.txt_Nome.TabIndex = 18;
+            this.txt_Nome.UseSelectable = true;
+            this.txt_Nome.WaterMark = "Nome Cerveja";
+            this.txt_Nome.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Nome.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(351, 87);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Logo";
+            // txt_Tipo
             // 
-            // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 311);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Preco";
             // 
-            // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(116, 308);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(100, 20);
-            this.txtPreco.TabIndex = 16;
+            this.txt_Tipo.CustomButton.Image = null;
+            this.txt_Tipo.CustomButton.Location = new System.Drawing.Point(162, 1);
+            this.txt_Tipo.CustomButton.Name = "";
+            this.txt_Tipo.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Tipo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Tipo.CustomButton.TabIndex = 1;
+            this.txt_Tipo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Tipo.CustomButton.UseSelectable = true;
+            this.txt_Tipo.CustomButton.Visible = false;
+            this.txt_Tipo.Lines = new string[0];
+            this.txt_Tipo.Location = new System.Drawing.Point(29, 141);
+            this.txt_Tipo.MaxLength = 32767;
+            this.txt_Tipo.Name = "txt_Tipo";
+            this.txt_Tipo.PasswordChar = '\0';
+            this.txt_Tipo.PromptText = "Tipo Cerveja";
+            this.txt_Tipo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Tipo.SelectedText = "";
+            this.txt_Tipo.SelectionLength = 0;
+            this.txt_Tipo.SelectionStart = 0;
+            this.txt_Tipo.ShortcutsEnabled = true;
+            this.txt_Tipo.Size = new System.Drawing.Size(184, 23);
+            this.txt_Tipo.TabIndex = 19;
+            this.txt_Tipo.UseSelectable = true;
+            this.txt_Tipo.WaterMark = "Tipo Cerveja";
+            this.txt_Tipo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Tipo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // btnVoltarMenuPrincipal
+            // txt_Teoralcolico
             // 
-            this.btnVoltarMenuPrincipal.Location = new System.Drawing.Point(231, 405);
-            this.btnVoltarMenuPrincipal.Name = "btnVoltarMenuPrincipal";
-            this.btnVoltarMenuPrincipal.Size = new System.Drawing.Size(111, 23);
-            this.btnVoltarMenuPrincipal.TabIndex = 17;
-            this.btnVoltarMenuPrincipal.Text = "Voltar";
-            this.btnVoltarMenuPrincipal.UseVisualStyleBackColor = true;
-            this.btnVoltarMenuPrincipal.Click += new System.EventHandler(this.btnVoltarMenuPrincipal_Click);
+            // 
+            // 
+            // 
+            this.txt_Teoralcolico.CustomButton.Image = null;
+            this.txt_Teoralcolico.CustomButton.Location = new System.Drawing.Point(162, 1);
+            this.txt_Teoralcolico.CustomButton.Name = "";
+            this.txt_Teoralcolico.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Teoralcolico.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Teoralcolico.CustomButton.TabIndex = 1;
+            this.txt_Teoralcolico.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Teoralcolico.CustomButton.UseSelectable = true;
+            this.txt_Teoralcolico.CustomButton.Visible = false;
+            this.txt_Teoralcolico.Lines = new string[0];
+            this.txt_Teoralcolico.Location = new System.Drawing.Point(29, 179);
+            this.txt_Teoralcolico.MaxLength = 32767;
+            this.txt_Teoralcolico.Name = "txt_Teoralcolico";
+            this.txt_Teoralcolico.PasswordChar = '\0';
+            this.txt_Teoralcolico.PromptText = "Teor Alcolico (%)";
+            this.txt_Teoralcolico.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Teoralcolico.SelectedText = "";
+            this.txt_Teoralcolico.SelectionLength = 0;
+            this.txt_Teoralcolico.SelectionStart = 0;
+            this.txt_Teoralcolico.ShortcutsEnabled = true;
+            this.txt_Teoralcolico.Size = new System.Drawing.Size(184, 23);
+            this.txt_Teoralcolico.TabIndex = 20;
+            this.txt_Teoralcolico.UseSelectable = true;
+            this.txt_Teoralcolico.WaterMark = "Teor Alcolico (%)";
+            this.txt_Teoralcolico.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Teoralcolico.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_Teoralcolico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Teoralcolico_KeyPress);
+            // 
+            // txt_Lupulo
+            // 
+            // 
+            // 
+            // 
+            this.txt_Lupulo.CustomButton.Image = null;
+            this.txt_Lupulo.CustomButton.Location = new System.Drawing.Point(162, 1);
+            this.txt_Lupulo.CustomButton.Name = "";
+            this.txt_Lupulo.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Lupulo.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Lupulo.CustomButton.TabIndex = 1;
+            this.txt_Lupulo.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Lupulo.CustomButton.UseSelectable = true;
+            this.txt_Lupulo.CustomButton.Visible = false;
+            this.txt_Lupulo.Lines = new string[0];
+            this.txt_Lupulo.Location = new System.Drawing.Point(29, 229);
+            this.txt_Lupulo.MaxLength = 32767;
+            this.txt_Lupulo.Name = "txt_Lupulo";
+            this.txt_Lupulo.PasswordChar = '\0';
+            this.txt_Lupulo.PromptText = "Tipo de Lupulo";
+            this.txt_Lupulo.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Lupulo.SelectedText = "";
+            this.txt_Lupulo.SelectionLength = 0;
+            this.txt_Lupulo.SelectionStart = 0;
+            this.txt_Lupulo.ShortcutsEnabled = true;
+            this.txt_Lupulo.Size = new System.Drawing.Size(184, 23);
+            this.txt_Lupulo.TabIndex = 21;
+            this.txt_Lupulo.UseSelectable = true;
+            this.txt_Lupulo.WaterMark = "Tipo de Lupulo";
+            this.txt_Lupulo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Lupulo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_Fabricante
+            // 
+            // 
+            // 
+            // 
+            this.txt_Fabricante.CustomButton.Image = null;
+            this.txt_Fabricante.CustomButton.Location = new System.Drawing.Point(162, 1);
+            this.txt_Fabricante.CustomButton.Name = "";
+            this.txt_Fabricante.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Fabricante.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Fabricante.CustomButton.TabIndex = 1;
+            this.txt_Fabricante.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Fabricante.CustomButton.UseSelectable = true;
+            this.txt_Fabricante.CustomButton.Visible = false;
+            this.txt_Fabricante.Lines = new string[0];
+            this.txt_Fabricante.Location = new System.Drawing.Point(29, 278);
+            this.txt_Fabricante.MaxLength = 32767;
+            this.txt_Fabricante.Name = "txt_Fabricante";
+            this.txt_Fabricante.PasswordChar = '\0';
+            this.txt_Fabricante.PromptText = "Fabricante";
+            this.txt_Fabricante.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Fabricante.SelectedText = "";
+            this.txt_Fabricante.SelectionLength = 0;
+            this.txt_Fabricante.SelectionStart = 0;
+            this.txt_Fabricante.ShortcutsEnabled = true;
+            this.txt_Fabricante.Size = new System.Drawing.Size(184, 23);
+            this.txt_Fabricante.TabIndex = 22;
+            this.txt_Fabricante.UseSelectable = true;
+            this.txt_Fabricante.WaterMark = "Fabricante";
+            this.txt_Fabricante.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Fabricante.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // txt_Preco
+            // 
+            // 
+            // 
+            // 
+            this.txt_Preco.CustomButton.Image = null;
+            this.txt_Preco.CustomButton.Location = new System.Drawing.Point(162, 1);
+            this.txt_Preco.CustomButton.Name = "";
+            this.txt_Preco.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txt_Preco.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txt_Preco.CustomButton.TabIndex = 1;
+            this.txt_Preco.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txt_Preco.CustomButton.UseSelectable = true;
+            this.txt_Preco.CustomButton.Visible = false;
+            this.txt_Preco.Lines = new string[0];
+            this.txt_Preco.Location = new System.Drawing.Point(29, 327);
+            this.txt_Preco.MaxLength = 32767;
+            this.txt_Preco.Name = "txt_Preco";
+            this.txt_Preco.PasswordChar = '\0';
+            this.txt_Preco.PromptText = "Preco (R$)";
+            this.txt_Preco.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_Preco.SelectedText = "";
+            this.txt_Preco.SelectionLength = 0;
+            this.txt_Preco.SelectionStart = 0;
+            this.txt_Preco.ShortcutsEnabled = true;
+            this.txt_Preco.Size = new System.Drawing.Size(184, 23);
+            this.txt_Preco.TabIndex = 23;
+            this.txt_Preco.UseSelectable = true;
+            this.txt_Preco.WaterMark = "Preco (R$)";
+            this.txt_Preco.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txt_Preco.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.txt_Preco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Preco_KeyPress);
+            this.txt_Preco.Leave += new System.EventHandler(this.txt_Preco_Leave);
+            // 
+            // btnCarregatFoto
+            // 
+            this.btnCarregatFoto.Location = new System.Drawing.Point(257, 356);
+            this.btnCarregatFoto.Name = "btnCarregatFoto";
+            this.btnCarregatFoto.Size = new System.Drawing.Size(231, 23);
+            this.btnCarregatFoto.TabIndex = 24;
+            this.btnCarregatFoto.Text = "Carregar Foto ";
+            this.btnCarregatFoto.UseSelectable = true;
+            this.btnCarregatFoto.Click += new System.EventHandler(this.btnCarregatFoto_Click);
+            // 
+            // btnVoltarMenu
+            // 
+            this.btnVoltarMenu.Location = new System.Drawing.Point(268, 452);
+            this.btnVoltarMenu.Name = "btnVoltarMenu";
+            this.btnVoltarMenu.Size = new System.Drawing.Size(141, 23);
+            this.btnVoltarMenu.TabIndex = 25;
+            this.btnVoltarMenu.Text = "Voltar";
+            this.btnVoltarMenu.UseSelectable = true;
+            this.btnVoltarMenu.Click += new System.EventHandler(this.btnVoltarMenu_Click);
+            // 
+            // btnCadastrarCerveja
+            // 
+            this.btnCadastrarCerveja.Location = new System.Drawing.Point(83, 452);
+            this.btnCadastrarCerveja.Name = "btnCadastrarCerveja";
+            this.btnCadastrarCerveja.Size = new System.Drawing.Size(148, 23);
+            this.btnCadastrarCerveja.TabIndex = 26;
+            this.btnCadastrarCerveja.Text = "Cadastrar Cerveja";
+            this.btnCadastrarCerveja.UseSelectable = true;
+            this.btnCadastrarCerveja.Click += new System.EventHandler(this.btnCadastrarCerveja_Click);
             // 
             // CadastroCerveja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 452);
-            this.Controls.Add(this.btnVoltarMenuPrincipal);
-            this.Controls.Add(this.txtPreco);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnAbrirImagem);
+            this.ClientSize = new System.Drawing.Size(511, 498);
+            this.Controls.Add(this.btnCadastrarCerveja);
+            this.Controls.Add(this.btnVoltarMenu);
+            this.Controls.Add(this.btnCarregatFoto);
+            this.Controls.Add(this.txt_Preco);
+            this.Controls.Add(this.txt_Fabricante);
+            this.Controls.Add(this.txt_Lupulo);
+            this.Controls.Add(this.txt_Teoralcolico);
+            this.Controls.Add(this.txt_Tipo);
+            this.Controls.Add(this.txt_Nome);
             this.Controls.Add(this.picboxLogoCerveja);
-            this.Controls.Add(this.txtFabricante);
-            this.Controls.Add(this.txtLupulo);
-            this.Controls.Add(this.txtTeoralcolico);
-            this.Controls.Add(this.txtTipo);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CadastroCerveja";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CadastroCerveja";
+            this.Text = "Cadastro de Cerveja";
+            this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogoCerveja)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtTipo;
-        private System.Windows.Forms.TextBox txtTeoralcolico;
-        private System.Windows.Forms.TextBox txtLupulo;
-        private System.Windows.Forms.TextBox txtFabricante;
         private System.Windows.Forms.PictureBox picboxLogoCerveja;
-        private System.Windows.Forms.Button btnAbrirImagem;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.Button btnVoltarMenuPrincipal;
+        private MetroFramework.Controls.MetroTextBox txt_Nome;
+        private MetroFramework.Controls.MetroTextBox txt_Tipo;
+        private MetroFramework.Controls.MetroTextBox txt_Teoralcolico;
+        private MetroFramework.Controls.MetroTextBox txt_Lupulo;
+        private MetroFramework.Controls.MetroTextBox txt_Fabricante;
+        private MetroFramework.Controls.MetroTextBox txt_Preco;
+        private MetroFramework.Controls.MetroButton btnCarregatFoto;
+        private MetroFramework.Controls.MetroButton btnVoltarMenu;
+        private MetroFramework.Controls.MetroButton btnCadastrarCerveja;
     }
 }

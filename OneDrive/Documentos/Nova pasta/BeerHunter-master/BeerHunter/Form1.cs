@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace BeerHunter
 {
-    public partial class Login : Form
+    public partial class Login : MetroFramework.Forms.MetroForm
     {
         private static Form current;
         private Cadastro cadastro;
@@ -25,17 +25,17 @@ namespace BeerHunter
         {
 
         }
-        private void Btn_cadastro_Click(object sender, EventArgs e)
+        private void btnCadastro_Click(object sender, EventArgs e)
         {
             cadastro = new Cadastro();
             this.Hide();
             cadastro.ShowDialog();
             this.Show();
         }
-        private void Btn_Login_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-                string usuario = txtNomeUsuario.Text;
-                string senha = _utilidadeService.Criptografia(txtSenha.ToString());
+                string usuario = txtNome_usuario.Text;
+                string senha = _utilidadeService.Criptografia(txt_Senha.Text);
             if (radioUsuario.Checked)
             {
                 if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
@@ -92,6 +92,12 @@ namespace BeerHunter
                     }
                 }
             }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+          
         }
     }
 }

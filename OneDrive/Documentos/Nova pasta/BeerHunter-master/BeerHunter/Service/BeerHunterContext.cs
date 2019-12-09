@@ -1,10 +1,5 @@
 ﻿using BeerHunter.Model;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BeerHunter.Service
 {
@@ -19,6 +14,7 @@ namespace BeerHunter.Service
         public DbSet<Endereco> Endereco { get; set; }
         public DbSet<Fornecedor> Fornecedor { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<ImagensNuvem> ImagensNuvems { get; set; }        
 
     }
 }

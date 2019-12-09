@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblNomeUsuario = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblNomeUsuario = new MetroFramework.Controls.MetroLabel();
+            this.FotoUsuario = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblNomeCerveja = new System.Windows.Forms.Label();
+            this.lblNomeCerveja = new MetroFramework.Controls.MetroLabel();
             this.lblNotaPreco = new System.Windows.Forms.Label();
             this.lblNotaLocal = new System.Windows.Forms.Label();
             this.lblNotaTemperatura = new System.Windows.Forms.Label();
@@ -46,10 +47,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DataGridHistorico = new System.Windows.Forms.DataGridView();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnVoltarAvaliacao = new System.Windows.Forms.Button();
+            this.btn_Salvar = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoUsuario)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,8 +62,8 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.lblNomeUsuario);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Controls.Add(this.FotoUsuario);
+            this.groupBox1.Location = new System.Drawing.Point(11, 72);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(301, 188);
             this.groupBox1.TabIndex = 0;
@@ -72,19 +73,19 @@
             // lblNomeUsuario
             // 
             this.lblNomeUsuario.AutoSize = true;
-            this.lblNomeUsuario.Location = new System.Drawing.Point(215, 19);
+            this.lblNomeUsuario.Location = new System.Drawing.Point(191, 32);
             this.lblNomeUsuario.Name = "lblNomeUsuario";
-            this.lblNomeUsuario.Size = new System.Drawing.Size(35, 13);
-            this.lblNomeUsuario.TabIndex = 1;
-            this.lblNomeUsuario.Text = "label1";
+            this.lblNomeUsuario.Size = new System.Drawing.Size(81, 19);
+            this.lblNomeUsuario.TabIndex = 2;
+            this.lblNomeUsuario.Text = "metroLabel1";
             // 
-            // pictureBox1
+            // FotoUsuario
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(6, 19);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 133);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.FotoUsuario.Location = new System.Drawing.Point(6, 19);
+            this.FotoUsuario.Name = "FotoUsuario";
+            this.FotoUsuario.Size = new System.Drawing.Size(118, 133);
+            this.FotoUsuario.TabIndex = 0;
+            this.FotoUsuario.TabStop = false;
             // 
             // groupBox2
             // 
@@ -100,7 +101,7 @@
             this.groupBox2.Controls.Add(this.pictureBox4);
             this.groupBox2.Controls.Add(this.pictureBox3);
             this.groupBox2.Controls.Add(this.pictureBox2);
-            this.groupBox2.Location = new System.Drawing.Point(12, 206);
+            this.groupBox2.Location = new System.Drawing.Point(6, 284);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(688, 175);
             this.groupBox2.TabIndex = 1;
@@ -110,16 +111,17 @@
             // lblNomeCerveja
             // 
             this.lblNomeCerveja.AutoSize = true;
-            this.lblNomeCerveja.Location = new System.Drawing.Point(165, 21);
+            this.lblNomeCerveja.Location = new System.Drawing.Point(135, 16);
             this.lblNomeCerveja.Name = "lblNomeCerveja";
-            this.lblNomeCerveja.Size = new System.Drawing.Size(35, 13);
-            this.lblNomeCerveja.TabIndex = 12;
-            this.lblNomeCerveja.Text = "label5";
+            this.lblNomeCerveja.Size = new System.Drawing.Size(81, 19);
+            this.lblNomeCerveja.TabIndex = 3;
+            this.lblNomeCerveja.Text = "metroLabel1";
             // 
             // lblNotaPreco
             // 
             this.lblNotaPreco.AutoSize = true;
-            this.lblNotaPreco.Location = new System.Drawing.Point(34, 87);
+            this.lblNotaPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.lblNotaPreco.Location = new System.Drawing.Point(36, 87);
             this.lblNotaPreco.Name = "lblNotaPreco";
             this.lblNotaPreco.Size = new System.Drawing.Size(35, 13);
             this.lblNotaPreco.TabIndex = 11;
@@ -128,7 +130,8 @@
             // lblNotaLocal
             // 
             this.lblNotaLocal.AutoSize = true;
-            this.lblNotaLocal.Location = new System.Drawing.Point(156, 87);
+            this.lblNotaLocal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.lblNotaLocal.Location = new System.Drawing.Point(160, 87);
             this.lblNotaLocal.Name = "lblNotaLocal";
             this.lblNotaLocal.Size = new System.Drawing.Size(35, 13);
             this.lblNotaLocal.TabIndex = 10;
@@ -137,7 +140,8 @@
             // lblNotaTemperatura
             // 
             this.lblNotaTemperatura.AutoSize = true;
-            this.lblNotaTemperatura.Location = new System.Drawing.Point(285, 87);
+            this.lblNotaTemperatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(211)))), ((int)(((byte)(0)))));
+            this.lblNotaTemperatura.Location = new System.Drawing.Point(286, 87);
             this.lblNotaTemperatura.Name = "lblNotaTemperatura";
             this.lblNotaTemperatura.Size = new System.Drawing.Size(35, 13);
             this.lblNotaTemperatura.TabIndex = 9;
@@ -208,7 +212,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.DataGridHistorico);
-            this.groupBox3.Location = new System.Drawing.Point(319, 12);
+            this.groupBox3.Location = new System.Drawing.Point(318, 72);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(381, 188);
             this.groupBox3.TabIndex = 2;
@@ -217,49 +221,61 @@
             // 
             // DataGridHistorico
             // 
+            this.DataGridHistorico.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridHistorico.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridHistorico.Location = new System.Drawing.Point(10, 19);
             this.DataGridHistorico.Name = "DataGridHistorico";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridHistorico.RowHeadersVisible = false;
             this.DataGridHistorico.Size = new System.Drawing.Size(365, 158);
-            this.DataGridHistorico.TabIndex = 0;
+            this.DataGridHistorico.TabIndex = 9;
             // 
-            // btnSalvar
+            // btn_Salvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(608, 387);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 6;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            this.btn_Salvar.Location = new System.Drawing.Point(544, 480);
+            this.btn_Salvar.Name = "btn_Salvar";
+            this.btn_Salvar.Size = new System.Drawing.Size(149, 39);
+            this.btn_Salvar.TabIndex = 12;
+            this.btn_Salvar.Text = "Salvar";
+            this.btn_Salvar.UseSelectable = true;
+            this.btn_Salvar.Click += new System.EventHandler(this.btn_Salvar_Click);
             // 
-            // btnVoltarAvaliacao
+            // metroButton2
             // 
-            this.btnVoltarAvaliacao.Location = new System.Drawing.Point(518, 387);
-            this.btnVoltarAvaliacao.Name = "btnVoltarAvaliacao";
-            this.btnVoltarAvaliacao.Size = new System.Drawing.Size(75, 23);
-            this.btnVoltarAvaliacao.TabIndex = 7;
-            this.btnVoltarAvaliacao.Text = "Voltar";
-            this.btnVoltarAvaliacao.UseVisualStyleBackColor = true;
-            this.btnVoltarAvaliacao.Click += new System.EventHandler(this.btnVoltarAvaliacao_Click);
+            this.metroButton2.Location = new System.Drawing.Point(413, 480);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(103, 39);
+            this.metroButton2.TabIndex = 13;
+            this.metroButton2.Text = "Voltar";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // RealizarAvaliacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 422);
-            this.Controls.Add(this.btnVoltarAvaliacao);
+            this.ClientSize = new System.Drawing.Size(707, 537);
+            this.Controls.Add(this.btn_Salvar);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RealizarAvaliacao";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RealizarAvaliacao";
+            this.Text = "Realizar Avaliação";
             this.Load += new System.EventHandler(this.RealizarAvaliacao_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FotoUsuario)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -274,11 +290,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblNomeUsuario;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox FotoUsuario;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtNotaTemperatura;
         private System.Windows.Forms.TextBox txtNotaLocal;
         private System.Windows.Forms.TextBox txtNotaPreco;
@@ -291,7 +305,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox txtComentario;
         private System.Windows.Forms.DataGridView DataGridHistorico;
-        private System.Windows.Forms.Button btnVoltarAvaliacao;
-        private System.Windows.Forms.Label lblNomeCerveja;
+        private MetroFramework.Controls.MetroLabel lblNomeUsuario;
+        private MetroFramework.Controls.MetroLabel lblNomeCerveja;
+        private MetroFramework.Controls.MetroButton btn_Salvar;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
