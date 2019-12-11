@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblNomeUsuario = new MetroFramework.Controls.MetroLabel();
             this.FotoUsuario = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lblNomeCerveja = new MetroFramework.Controls.MetroLabel();
             this.lblNotaPreco = new System.Windows.Forms.Label();
             this.lblNotaLocal = new System.Windows.Forms.Label();
@@ -49,9 +52,6 @@
             this.DataGridHistorico = new System.Windows.Forms.DataGridView();
             this.btn_Salvar = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoUsuario)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -113,6 +113,33 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Avaliar Cerveja";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(256, 76);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(77, 19);
+            this.metroLabel3.TabIndex = 16;
+            this.metroLabel3.Text = "Nota Temp.";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(135, 76);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(72, 19);
+            this.metroLabel2.TabIndex = 15;
+            this.metroLabel2.Text = "Nota Local";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(17, 76);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel1.TabIndex = 14;
+            this.metroLabel1.Text = "Nota Preço";
             // 
             // lblNomeCerveja
             // 
@@ -176,6 +203,8 @@
             this.txtNotaTemperatura.Name = "txtNotaTemperatura";
             this.txtNotaTemperatura.Size = new System.Drawing.Size(54, 20);
             this.txtNotaTemperatura.TabIndex = 5;
+            this.txtNotaTemperatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotaTemperatura_KeyPress);
+            this.txtNotaTemperatura.Validating += new System.ComponentModel.CancelEventHandler(this.txtNotaTemperatura_Validating);
             // 
             // txtNotaLocal
             // 
@@ -183,6 +212,8 @@
             this.txtNotaLocal.Name = "txtNotaLocal";
             this.txtNotaLocal.Size = new System.Drawing.Size(54, 20);
             this.txtNotaLocal.TabIndex = 4;
+            this.txtNotaLocal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotaLocal_KeyPress);
+            this.txtNotaLocal.Validated += new System.EventHandler(this.txtNotaLocal_Validated);
             // 
             // txtNotaPreco
             // 
@@ -190,6 +221,8 @@
             this.txtNotaPreco.Name = "txtNotaPreco";
             this.txtNotaPreco.Size = new System.Drawing.Size(54, 20);
             this.txtNotaPreco.TabIndex = 3;
+            this.txtNotaPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNotaPreco_KeyPress);
+            this.txtNotaPreco.Validating += new System.ComponentModel.CancelEventHandler(this.txtNotaPreco_Validating);
             // 
             // pictureBox4
             // 
@@ -232,14 +265,14 @@
             this.DataGridHistorico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridHistorico.Location = new System.Drawing.Point(10, 19);
             this.DataGridHistorico.Name = "DataGridHistorico";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridHistorico.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridHistorico.RowHeadersVisible = false;
             this.DataGridHistorico.Size = new System.Drawing.Size(365, 158);
             this.DataGridHistorico.TabIndex = 9;
@@ -263,33 +296,6 @@
             this.metroButton2.Text = "Voltar";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(17, 76);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
-            this.metroLabel1.TabIndex = 14;
-            this.metroLabel1.Text = "Nota Preço";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(135, 76);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(72, 19);
-            this.metroLabel2.TabIndex = 15;
-            this.metroLabel2.Text = "Nota Local";
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(256, 76);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(77, 19);
-            this.metroLabel3.TabIndex = 16;
-            this.metroLabel3.Text = "Nota Temp.";
             // 
             // RealizarAvaliacao
             // 

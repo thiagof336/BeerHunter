@@ -52,9 +52,9 @@ namespace BeerHunter.views
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             gridHistoricoAvaliacaoCerveja.DataSource = _utilidadeService.HistoricoAvaliacaoCerveja(Session.Instance.cadastraCerveja.CadastraCervejaID);
             var media = mediaAvaliacoes();
-            lbl_Npreco.Text = media.Preco_N.ToString();
-            lbl_NLocal.Text = media.Local_N.ToString();
-            lbl_NTemperatura.Text = media.Temperatura_N.ToString();
+            lbl_Npreco.Text = Math.Round(media.Preco_N,2).ToString();
+            lbl_NLocal.Text = Math.Round(media.Local_N,2).ToString();
+            lbl_NTemperatura.Text = Math.Round(media.Temperatura_N,2).ToString();
             try
             {
                 FotoCerveja.ImageLocation = cerveja.ImagensID.EnderecoImagem;
