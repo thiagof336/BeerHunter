@@ -21,5 +21,7 @@ namespace BeerHunter.inter
         Boolean ValidarNomeDeUsuario(string nomeUsuario);
         Boolean ValidaLoginFornecedor(string loginUsuario);
         IEnumerable<Cerveja> buscaCervejaFornecedor(Fornecedor fornecedor);
+        Boolean updatePrecoCerveja(CadastraCerveja cerveja);
+        Boolean updateCerveja(Cerveja cerveja);
     }
 }

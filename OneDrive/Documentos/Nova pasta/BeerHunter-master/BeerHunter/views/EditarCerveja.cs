@@ -54,11 +54,13 @@ namespace BeerHunter.views
             if (editouImage)
             {
                 _cerveja.ImagensID = _utilidadeService.uploadImagem(picboxLogoCerveja.ImageLocation);
-            }                
+            }
 
             _CadastraCerveja.PrecoCerveja = double.Parse(txt_Preco.Text);
-            _context.SaveChanges();
 
+            _utilidadeService.updateCerveja(_cerveja);
+            _utilidadeService.updatePrecoCerveja(_CadastraCerveja);
+            
             this.DialogResult = DialogResult.OK;
         }
 

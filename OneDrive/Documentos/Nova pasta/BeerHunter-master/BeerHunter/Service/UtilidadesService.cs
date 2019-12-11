@@ -183,6 +183,41 @@ namespace BeerHunter.Service
                                    };
             return historicoCerveja.ToList();
         }
+        public Boolean updateCerveja(Cerveja cerveja)
+        {
+            using(var con = new NpgsqlConnection(conn))
+            {
+                string sql = "UPDATE dbo.\"Cervejas\" "+
+                            "SET \"NomeCerveja\" =@NomeCerveja, \"Tipo\" =@Tipo, \"TeorAlcoolico\" =@TeorAlcoolico, \"Lupulo\" =@Lupulo, \"Fabricante\" =@Fabricante, \"ImagensID_ImagensNuvemID\" =@ImagemID "+
+                            "WHERE \"CervejaID\" = @cervejaID; ";
+
+                con.Execute(sql,new { NomeCerveja = cerveja.NomeCerveja,
+                    Tipo = cerveja.Tipo,
+                    TeorAlcoolico = cerveja.TeorAlcoolico,
+                    Lupulo = cerveja.Lupulo,
+                    Fabricante = cerveja.Fabricante,
+                    ImagemID = cerveja.ImagensID.ImagensNuvemID,
+                    cervejaID = cerveja.CervejaID
+                });
+            }
+
+            return true;
+        }
+
+        public Boolean updatePrecoCerveja(CadastraCerveja cerveja)
+        {
+            using (var con = new NpgsqlConnection(conn))
+            {
+                string sql = "UPDATE dbo.\"CadastraCervejas\" "+
+                            "SET \"PrecoCerveja\" = @precoCerveja "+
+                            "WHERE \"CadastraCervejaID\" = @cervejaid ";
+
+                con.Execute(sql, new { precoCerveja = cerveja.PrecoCerveja, cervejaid = cerveja.CervejaID.CervejaID });
+            }
+
+            return true;
+        }
+
         public Fornecedor FornecedorExiste(String usuario,String senha)
         {
             var login = _context.Fornecedor.Where(p => p.Login == usuario && p.Senha == senha).FirstOrDefault();
