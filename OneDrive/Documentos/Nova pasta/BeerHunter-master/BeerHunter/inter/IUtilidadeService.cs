@@ -17,9 +17,9 @@ namespace BeerHunter.inter
         string Criptografia(string senha);
         string Descriptografar(string valor);
         ImagensNuvem uploadImagem(string url);
-        public bool ValidarEmail(String email);
-        public Boolean ValidarNomeDeUsuario(string nomeUsuario);
-        public Boolean ValidaLoginFornecedor(string loginUsuario);
-
+        bool ValidarEmail(String email);
+        Boolean ValidarNomeDeUsuario(string nomeUsuario);
+        Boolean ValidaLoginFornecedor(string loginUsuario);
+        IEnumerable<Cerveja> buscaCervejaFornecedor(Fornecedor fornecedor);
     }
 }

@@ -48,6 +48,9 @@
             this.lbl_Npreco = new System.Windows.Forms.Label();
             this.lbl_NLocal = new System.Windows.Forms.Label();
             this.lbl_NTemperatura = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FotoCerveja)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -205,7 +208,7 @@
             // 
             // btn_voltar
             // 
-            this.btn_voltar.Location = new System.Drawing.Point(808, 438);
+            this.btn_voltar.Location = new System.Drawing.Point(808, 502);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(75, 23);
             this.btn_voltar.TabIndex = 11;
@@ -258,11 +261,41 @@
             this.lbl_NTemperatura.TabIndex = 21;
             this.lbl_NTemperatura.Text = "3";
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(394, 436);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(43, 19);
+            this.metroLabel1.TabIndex = 22;
+            this.metroLabel1.Text = "Preço";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(582, 438);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(39, 19);
+            this.metroLabel2.TabIndex = 23;
+            this.metroLabel2.Text = "Local";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(721, 436);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(151, 19);
+            this.metroLabel4.TabIndex = 24;
+            this.metroLabel4.Text = "Temperatura da Cerveja";
+            // 
             // telaAvaliacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 480);
+            this.ClientSize = new System.Drawing.Size(904, 535);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.lbl_NTemperatura);
             this.Controls.Add(this.lbl_NLocal);
             this.Controls.Add(this.lbl_Npreco);
@@ -313,5 +346,8 @@
         private System.Windows.Forms.Label lbl_Npreco;
         private System.Windows.Forms.Label lbl_NLocal;
         private System.Windows.Forms.Label lbl_NTemperatura;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }

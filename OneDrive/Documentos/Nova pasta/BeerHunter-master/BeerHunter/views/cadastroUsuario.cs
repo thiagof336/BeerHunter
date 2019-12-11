@@ -69,11 +69,6 @@ namespace BeerHunter.views
                     Endereco endereco = new Endereco();
                     if (!string.IsNullOrEmpty(txt_NomeFornecedor.Text) || !string.IsNullOrEmpty(txt_SenhaFornecedor.Text)  || !string.IsNullOrEmpty(txt_CEP.Text) || !string.IsNullOrEmpty(txt_Login.Text))
                     {
-                        MessageBox.Show("Preencha os campos vazios!!!");
-                        
-                    }
-                    else
-                    {
                         fornecedor.Nome = txt_NomeFornecedor.Text;
                         fornecedor.Senha = _utilidadeService.Criptografia(txt_SenhaFornecedor.Text);
                         fornecedor.Login = txt_Login.Text;
@@ -91,7 +86,12 @@ namespace BeerHunter.views
                         beerHunterContext.Endereco.Add(endereco);
                         beerHunterContext.SaveChanges();
                         MessageBox.Show("ok");
-
+                        
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos vazios!!!");
                     }
                 }
                 catch (Exception ex)
@@ -108,10 +108,6 @@ namespace BeerHunter.views
 
                     if (!string.IsNullOrEmpty(txt_Nome.Text) || !string.IsNullOrEmpty(txt_NomeUsuario.Text) || !string.IsNullOrEmpty(txt_Senha.Text)  || !string.IsNullOrEmpty(txt_Email.Text) )
                     {
-                        MessageBox.Show("Preencha os campos Vazios");
-                    }
-                    else
-                    {
                         usuario.Nome = txt_Nome.Text;
                         usuario.Senha = _utilidadeService.Criptografia(txt_Senha.Text);
                         usuario.Nomeusuario = txt_NomeUsuario.Text;
@@ -122,8 +118,13 @@ namespace BeerHunter.views
                         beerHunterContext.Usuario.Add(usuario);
                         beerHunterContext.SaveChanges();
 
-                        
+
                         MessageBox.Show("ok");
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("Preencha os campos Vazios");
                     }
                 }
                 catch (Exception)

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.picboxLogoCerveja = new System.Windows.Forms.PictureBox();
             this.txt_Nome = new MetroFramework.Controls.MetroTextBox();
             this.txt_Tipo = new MetroFramework.Controls.MetroTextBox();
             this.txt_Teoralcolico = new MetroFramework.Controls.MetroTextBox();
@@ -38,17 +37,10 @@
             this.btnCarregatFoto = new MetroFramework.Controls.MetroButton();
             this.btnVoltarMenu = new MetroFramework.Controls.MetroButton();
             this.btnCadastrarCerveja = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.picboxLogoCerveja = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picboxLogoCerveja)).BeginInit();
             this.SuspendLayout();
-            // 
-            // picboxLogoCerveja
-            // 
-            this.picboxLogoCerveja.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picboxLogoCerveja.Location = new System.Drawing.Point(257, 85);
-            this.picboxLogoCerveja.Name = "picboxLogoCerveja";
-            this.picboxLogoCerveja.Size = new System.Drawing.Size(231, 265);
-            this.picboxLogoCerveja.TabIndex = 11;
-            this.picboxLogoCerveja.TabStop = false;
             // 
             // txt_Nome
             // 
@@ -257,7 +249,7 @@
             // 
             // btnVoltarMenu
             // 
-            this.btnVoltarMenu.Location = new System.Drawing.Point(268, 452);
+            this.btnVoltarMenu.Location = new System.Drawing.Point(331, 468);
             this.btnVoltarMenu.Name = "btnVoltarMenu";
             this.btnVoltarMenu.Size = new System.Drawing.Size(141, 23);
             this.btnVoltarMenu.TabIndex = 25;
@@ -267,19 +259,39 @@
             // 
             // btnCadastrarCerveja
             // 
-            this.btnCadastrarCerveja.Location = new System.Drawing.Point(83, 452);
+            this.btnCadastrarCerveja.Location = new System.Drawing.Point(29, 410);
             this.btnCadastrarCerveja.Name = "btnCadastrarCerveja";
-            this.btnCadastrarCerveja.Size = new System.Drawing.Size(148, 23);
+            this.btnCadastrarCerveja.Size = new System.Drawing.Size(170, 23);
             this.btnCadastrarCerveja.TabIndex = 26;
             this.btnCadastrarCerveja.Text = "Cadastrar Cerveja";
             this.btnCadastrarCerveja.UseSelectable = true;
             this.btnCadastrarCerveja.Click += new System.EventHandler(this.btnCadastrarCerveja_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(245, 410);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(170, 23);
+            this.metroButton2.TabIndex = 28;
+            this.metroButton2.Text = "Edita Cerveja";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // picboxLogoCerveja
+            // 
+            this.picboxLogoCerveja.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.picboxLogoCerveja.Location = new System.Drawing.Point(257, 85);
+            this.picboxLogoCerveja.Name = "picboxLogoCerveja";
+            this.picboxLogoCerveja.Size = new System.Drawing.Size(231, 265);
+            this.picboxLogoCerveja.TabIndex = 11;
+            this.picboxLogoCerveja.TabStop = false;
             // 
             // CadastroCerveja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 498);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.btnCadastrarCerveja);
             this.Controls.Add(this.btnVoltarMenu);
             this.Controls.Add(this.btnCarregatFoto);
@@ -311,5 +323,6 @@
         private MetroFramework.Controls.MetroButton btnCarregatFoto;
         private MetroFramework.Controls.MetroButton btnVoltarMenu;
         private MetroFramework.Controls.MetroButton btnCadastrarCerveja;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

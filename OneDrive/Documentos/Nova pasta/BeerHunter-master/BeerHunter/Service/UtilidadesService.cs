@@ -124,6 +124,30 @@ namespace BeerHunter.Service
                 return null;
             }
         }
+
+        public IEnumerable<Cerveja> buscaCervejaFornecedor(Fornecedor fornecedor)
+        {
+            try
+            {
+                IEnumerable<Cerveja> retorno = null;
+                using(var con = new NpgsqlConnection(conn))
+                {
+                    string sql = "SELECT \"CervejaID\", \"NomeCerveja\", \"Tipo\", \"TeorAlcoolico\", \"Lupulo\", \"Fabricante\", \"ImagensID_ImagensNuvemID\" "+
+                                        " FROM dbo.\"Cervejas\" "+
+                                        " where \"CervejaID\" in (SELECT \"CervejaID_CervejaID\" " +
+                                        "    FROM dbo.\"CadastraCervejas\" "+
+                                        " where \"FornecedorID_FornecedorID\" = 1)";
+                    retorno = con.Query<Cerveja>(sql);
+                }
+
+                return retorno;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
         public IEnumerable HistoricoBusca(int id)
         {
             var hostirco = from u in _context.Usuario

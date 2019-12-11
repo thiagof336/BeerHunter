@@ -301,6 +301,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\UsuarioController.cs" />
+    <Compile Include="EditaCerveja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditaCerveja.Designer.cs">
+      <DependentUpon>EditaCerveja.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,12 +383,21 @@
     <Compile Include="views\cadastroUsuario.Designer.cs">
       <DependentUpon>cadastroUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\EditarCerveja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\EditarCerveja.Designer.cs">
+      <DependentUpon>EditarCerveja.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\RealizarAvaliacao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\RealizarAvaliacao.Designer.cs">
       <DependentUpon>RealizarAvaliacao.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EditaCerveja.resx">
+      <DependentUpon>EditaCerveja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -428,6 +443,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\cadastroUsuario.resx">
       <DependentUpon>cadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\EditarCerveja.resx">
+      <DependentUpon>EditarCerveja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\RealizarAvaliacao.resx">
       <DependentUpon>RealizarAvaliacao.cs</DependentUpon>

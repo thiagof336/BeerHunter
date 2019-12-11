@@ -103,5 +103,16 @@ namespace BeerHunter.views
                         e.Handled = true;
             }
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+
+            using (Form form = new EditaCerveja())
+            {
+                this.Hide();
+                form.ShowDialog();
+            }
+            this.Show();
+        }
     }
 }   
